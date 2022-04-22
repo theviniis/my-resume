@@ -17,10 +17,16 @@ export const SubTitle = styled.h2`
 `;
 
 export const StyledH3 = styled.h3`
-  font-size: ${({ fontSize }) => fontSize || `${global.h3FontSize}`};
+  font-size: ${({ fontSize }) => fontSize || `${global.smallFontSize}`};
   text-transform: ${({ textTransform }) => textTransform || ''};
-  text-align: ${({ textAlign }) => textAlign || 'inherit'};
+  text-align: ${({ textAlign }) => textAlign || ''};
   font-weight: ${({ fontWeight }) => fontWeight || `${global.fontMedium}`};
+  color: ${({ theme }) => theme.secondary};
+`;
+
+export const SmallSubTitle = styled(StyledH3)`
+  font-weight: 400;
+  font-weight: ${({ fontWeight }) => fontWeight || ``};
 `;
 
 export const Icon = styled.i`

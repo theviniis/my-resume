@@ -15,3 +15,13 @@ export const StyledCard = styled.div`
 export const Card = ({ children, className }) => {
   return <StyledCard className={className}>{children}</StyledCard>;
 };
+
+export const ExperienceCard = styled.section`
+  padding: 1rem;
+  border-radius: ${global.borderRadious}rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+`;

@@ -9,7 +9,7 @@ const Content = styled.div`
 
 const Section = ({ title, children, className, boxShadow, hover }) => {
   return (
-    <Card className={className} hover={hover}>
+    <Card as='section' className={className} hover={hover}>
       {title ? <SubTitle>{title}</SubTitle> : null}
       <Content className='flex'>{children}</Content>
     </Card>

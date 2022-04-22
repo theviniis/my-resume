@@ -5,16 +5,10 @@ import Section from '../helper/Section';
 import styled from 'styled-components';
 import ExperienceHeader from './ExperienceHeader';
 import { Description } from '../../styles/styles';
+import { ExperienceCard } from '../helper/Card';
 
-const Wrapper = styled.section`
+const Wrapper = styled(ExperienceCard)`
   gap: ${global.mb2}rem !important;
-  padding: 1rem;
-  border-radius: ${global.borderRadious}rem;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.05);
-
-  &:hover {
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-  }
 `;
 
 const Experience = () => {

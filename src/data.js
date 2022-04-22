@@ -80,15 +80,8 @@ export const info = {
     // },
   ],
 
-  cursos: {
-    hcode: {
-      escola: 'HCode',
-      cursos: {
-        curso: ['Curso Completo do Desenvolvedor Web'],
-        horas: 13.5,
-      },
-    },
-    origamid: {
+  cursos: [
+    {
       escola: 'Origamid',
       cursos: [
         {
@@ -113,5 +106,14 @@ export const info = {
         },
       ],
     },
-  },
+    {
+      escola: 'HCode',
+      cursos: [
+        {
+          curso: 'Curso Completo do Desenvolvedor Web',
+          horas: 13.5,
+        },
+      ],
+    },
+  ],
 };
