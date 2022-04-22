@@ -5,29 +5,22 @@ import { SmallSubTitle, StyledH3 } from '../../styles/styles';
 import { ExperienceCard } from '../helper/Card';
 import styled from 'styled-components';
 import { global } from '../../styles/global';
+import Course from './Course';
 
 const Container = styled(Section)`
+  max-width: 50%;
+
   > div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
   }
 `;
 
 const Courses = () => {
   return (
     <Container title='Cursos Complementares'>
-      {info.cursos.map(({ escola, cursos }) => (
-        <ExperienceCard key={escola}>
-          <StyledH3 fontSize={global.normalFontSize}>{escola}</StyledH3>
-          {cursos.map(({ curso, horas }) => (
-            <div key={curso}>
-              <SmallSubTitle as='span' fontWeight='500'>
-                {curso} -{' '}
-              </SmallSubTitle>
-              <SmallSubTitle as='span'>{horas} horas.</SmallSubTitle>
-            </div>
-          ))}
-        </ExperienceCard>
+      {info.cursos.map((curso) => (
+        <Course curso={curso} key={curso.escola} />
       ))}
     </Container>
   );
