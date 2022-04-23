@@ -4,7 +4,7 @@ import { global } from '../../styles/global';
 import { Icon } from '../../styles/styles';
 
 const List = styled.ul`
-  gap: ${global.mb1}rem !important;
+  gap: ${global.mb1}rem;
   font-size: ${global.smallFontSize};
 `;
 const Item = styled.li`

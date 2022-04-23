@@ -1,10 +1,11 @@
 import React from 'react';
-import Experience from './Experience';
-import Profile from './Profile';
+import Experiences from './components/Experiences';
+import Profile from './components/Profile';
 import styled from 'styled-components';
-import Courses from './Courses';
+import Courses from './components/Courses';
 
 const Wrapper = styled.div`
+  gap: 2rem;
   padding: 2rem;
 `;
 
@@ -12,7 +13,7 @@ const Content = () => {
   return (
     <Wrapper className='flex'>
       <Profile />
-      <Experience />
+      <Experiences />
       <Courses />
     </Wrapper>
   );

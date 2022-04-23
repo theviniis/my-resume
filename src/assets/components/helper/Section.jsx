@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SubTitle } from '../../styles/styles';
-import { StyledCard as Card } from './Card';
+import { Card, SubTitle } from '../../styles/styles';
 
-const Content = styled.div`
-  margin-top: 1rem;
-`;
+const Content = styled.section``;
 
-const Section = ({ title, children, className, boxShadow, hover }) => {
+const Section = ({ title, children, className, card }) => {
   return (
-    <Card as='section' className={className} hover={hover}>
+    <Content className={className}>
       {title ? <SubTitle>{title}</SubTitle> : null}
-      <Content className='flex'>{children}</Content>
-    </Card>
+      {children}
+    </Content>
   );
 };
 

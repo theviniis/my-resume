@@ -1,18 +1,18 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { light, dark } from './assets/styles/themes';
-import { GlobalContext } from './GlobalContext';
-import { global, GlobalStyles } from './assets/styles/global';
+import { GlobalContext } from './assets/GlobalContext';
+import { GlobalStyles } from './assets/styles/global';
+import { Card } from './assets/styles/styles';
 import styled from 'styled-components';
-import { StyledCard } from './assets/components/helper/Card';
 import SideNav from './assets/components/SideNav/SideNav';
 import Content from './assets/components/Content/Content';
 
-const Wrapper = styled(StyledCard)`
+const Wrapper = styled(Card)`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(336px, 380px) 2fr;
   height: 85vh;
-  width: 70vw;
+  width: 60vw;
   margin: auto;
   overflow-y: scroll;
   padding: 0;

@@ -21,8 +21,8 @@ export const global = {
 
   headerHeight: 3, // rem
 
-  shadow: '1px 1px 15px rgba(0, 0, 0, 0.2)',
-  shadowHover: '1px 1px 20px rgba(0, 0, 0, 0.210)',
+  shadow: '1px 1px 4px rgba(0, 0, 0, 0.15)',
+  shadowHover: '1px 1px 6px rgba(0, 0, 0, 0.20)',
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -53,13 +53,14 @@ export const GlobalStyles = createGlobalStyle`
   h1,
   h2,
   h3,
+  h4,
   ul,
   p {
     margin: 0;
+    padding: 0;
   }
 
-  ul {
-    padding: 0;
+  ul,li {
     list-style: none;
   }
 
@@ -77,6 +78,15 @@ export const GlobalStyles = createGlobalStyle`
   .flex {
     display: flex;
     flex-direction: column;
-    gap: ${global.mb3}rem;
+  }
+
+  .card {
+    padding: 2rem;
+    box-shadow: ${global.shadow};
+    border-radius: ${global.borderRadious}rem;
+
+    &:hover {
+      box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadowHover}`};
+    }
   }
 `;

@@ -1,7 +1,7 @@
 export const light = {
   name: 'light',
   primary: '#e4e4f0',
-  secondary: '#383F51', //70D6FF
+  secondary: '#219ebc',
   titleColor: '#0b0a0a',
   textColor: '#333',
   navColor: 'white',
@@ -24,4 +24,13 @@ export const orange = {
   secondary: '#7CC6FE',
   titleColor: '#0b0a0a',
   textColor: '#333',
+};
+
+export const grey = {
+  name: 'light',
+  primary: '#e4e4f0',
+  secondary: '#383F51', //70D6FF
+  titleColor: '#0b0a0a',
+  textColor: '#333',
+  navColor: 'white',
 };

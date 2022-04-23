@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import { global } from '../styles/global';
-import Section from '../components/helper/Section';
 
 export const Title = styled.h1`
-  /* color: ${({ theme }) => theme.titleColor}; */
   font-size: ${({ fontSize }) => fontSize || `${global.h1FontSize}`};
   font-weight: ${({ fontWeight }) => fontWeight || `${global.fontMedium}`};
-  text-align: ${({ textAlign }) => textAlign || ''};
+  text-align: ${({ textAlign }) => textAlign || 'center'};
   text-transform: ${({ textTransform }) => textTransform || 'uppercase'};
+  margin-bottom: 0.25rem;
 `;
 
 export const SubTitle = styled.h2`
   font-size: ${({ fontSize }) => fontSize || `${global.h2FontSize}`};
   font-weight: ${({ fontWeight }) => fontWeight || `${global.fontSemiBold}`};
   text-align: ${({ textAlign }) => textAlign || ''};
+  margin-bottom: 1rem;
 `;
 
 export const StyledH3 = styled.h3`
@@ -21,12 +21,21 @@ export const StyledH3 = styled.h3`
   text-transform: ${({ textTransform }) => textTransform || ''};
   text-align: ${({ textAlign }) => textAlign || ''};
   font-weight: ${({ fontWeight }) => fontWeight || `${global.fontMedium}`};
-  color: ${({ theme }) => theme.secondary};
+  text-align: ${({ textAlign }) => textAlign || ''};
+  margin-bottom: ${({ marginBottom }) => marginBottom || ''};
+  /* color: ${({ theme }) => theme.secondary}; */
 `;
 
 export const SmallSubTitle = styled(StyledH3)`
-  font-weight: 400;
-  font-weight: ${({ fontWeight }) => fontWeight || ``};
+  font-weight: ${({ fontWeight }) => fontWeight || 400};
+  color: ${(props) => props.theme.textColor};
+`;
+
+export const ColorH3 = styled.h3`
+  font-size: ${global.normalFontSize};
+  color: ${({ theme }) => theme.secondary};
+  font-weight: ${global.fontMedium};
+  margin-bottom: ${({ marginBottom }) => marginBottom || ''};
 `;
 
 export const Icon = styled.i`
@@ -35,5 +44,28 @@ export const Icon = styled.i`
 `;
 
 export const Description = styled.p`
-  font-size: ${global.smallFontSize};
+  font-size: ${global.normalFontSize};
+  line-height: 1.3;
+`;
+
+export const Card = styled.div`
+  padding: 2rem;
+  box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadow}`};
+  border-radius: ${global.borderRadious}rem;
+  margin-top: ${({ marginTop }) => marginTop || ''};
+  gap: ${({ gap }) => gap || ''};
+
+  &:hover {
+    box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadowHover}`};
+  }
+`;
+
+export const ContentCard = styled.section`
+  padding: 2rem;
+  border-radius: ${global.borderRadious}rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.075);
+
+  &:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
 `;
