@@ -4,16 +4,16 @@ import Profile from './Profile';
 import { global } from '../../styles/global';
 import NavList from './NavList';
 import Button from '../helper/Button';
-import { Wrapper } from '../../styles/styles';
 
 const Container = styled.header`
   background-color: inherit;
   font-size: 1.125rem;
   height: ${global.headerHeight}rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 20;
   width: 100%;
+  padding-block: 1ch;
 `;
 
 const Nav = styled.nav`

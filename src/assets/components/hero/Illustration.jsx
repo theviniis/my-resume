@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Svg = styled.svg`
-  max-width: 100%;
-  z-index: -1;
-  grid-column: 2 / -1 !important;
-  grid-row: 1;
-`;
+const Svg = styled.svg``;
 
 const Illustration = () => {
   return (

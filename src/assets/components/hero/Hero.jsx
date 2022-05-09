@@ -1,25 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Wrapper } from '../../styles/styles';
 import HeroButton from '../helper/HeroButton';
 import Illustration from './Illustration';
 
-const Container = styled.section`
+const Container = styled(Wrapper)`
   padding-block: 8ch;
-  grid-column: 2/-1 !important;
-  grid-template-columns:
-    340px
-    4rem
-    min(760px, 90%)
-    1fr !important;
+  grid-column: 1/-1;
+
+  svg {
+    max-width: 100%;
+    z-index: -1;
+    grid-column: 2 / -1;
+    grid-row: 1;
+    margin-left: 340px;
+  }
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-column: 1/3 !important;
+  grid-column: 2;
   grid-row: 1;
-  /* min-width: 344px; */
+  max-width: 360px;
 `;
 const Title = styled.h1`
   font-size: clamp(4rem, 4.5vw, 6rem);
