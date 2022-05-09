@@ -4,27 +4,30 @@ import Profile from './Profile';
 import { global } from '../../styles/global';
 import NavList from './NavList';
 import Button from '../helper/Button';
+import { Wrapper } from '../../styles/styles';
 
 const Container = styled.header`
   background-color: inherit;
   font-size: 1.125rem;
   height: ${global.headerHeight}rem;
-  max-width: ${global.maxWidth}px;
   position: fixed;
   top: 0;
   z-index: 20;
-  margin: 0 auto;
+  width: 100%;
 `;
 
 const Nav = styled.nav`
+  max-width: ${global.maxWidth}px;
+  grid-column: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 `;
 
 const Header = () => {
   return (
-    <Container>
+    <Container as='header'>
       <Nav>
         <Profile />
         <NavList />
