@@ -19,7 +19,8 @@ export const global = {
 
   borderRadious: 0.5, // rem,
 
-  headerHeight: 3, // rem
+  headerHeight: 4, // rem
+  maxWidth: 760,
 
   shadow: '2px 2px 6px rgba(0, 0, 0, 0.15)',
   shadowHover: '2px 2px 6px rgba(0, 0, 0, 0.20)',
@@ -86,26 +87,4 @@ export const GlobalStyles = createGlobalStyle`
     height: auto;
     display: block;
   }
-
-
-
-#root > * {
-  /* grid-column: 2; */
-}
-
-  #root, 
-  .wrapper {
-  display: grid;
-  grid-template-columns:
-    1fr
-    min(760px, 100%)
-    1fr;
-  }
-  .wrapper > * {
-    grid-column: 2;
-  }
-  .full-bleed {
-    width: 100%;
-    grid-column: 1 / -1;
-  } 
 `;

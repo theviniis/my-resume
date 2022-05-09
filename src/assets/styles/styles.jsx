@@ -69,3 +69,16 @@ export const ContentCard = styled.section`
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 `;
+
+export const Wrapper = styled.main`
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(${global.maxWidth}px, 100%)
+    1fr;
+`;
+
+export const FullBleed = styled.div`
+  width: 100%;
+  grid-column: 1 / -1;
+`;
