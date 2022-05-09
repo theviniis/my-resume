@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card, SubTitle } from '../../styles/styles';
 
-const Content = styled.section``;
+const Content = styled.section`
+  margin-block: 2ch;
+`;
+const Title = styled.h2`
+  margin-bottom: 2ch;
+`;
 
-const Section = ({ title, children, className, card }) => {
+const Section = ({ title, children, className }) => {
   return (
     <Content className={className}>
-      {title ? <SubTitle>{title}</SubTitle> : null}
+      {title ? <Title>{title}</Title> : null}
       {children}
     </Content>
   );

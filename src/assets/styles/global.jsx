@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const global = {
-  fontFamily: `'Fira Sans', sans-serif;`,
+  fontFamily: `'Poppins', sans-serif`,
   h1FontSize: '1.75rem',
   h2FontSize: '1.5rem',
   h3FontSize: '1rem',
@@ -21,11 +21,14 @@ export const global = {
 
   headerHeight: 3, // rem
 
-  shadow: '1px 1px 4px rgba(0, 0, 0, 0.15)',
-  shadowHover: '1px 1px 6px rgba(0, 0, 0, 0.20)',
+  shadow: '2px 2px 6px rgba(0, 0, 0, 0.15)',
+  shadowHover: '2px 2px 6px rgba(0, 0, 0, 0.20)',
 };
 
 export const GlobalStyles = createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
   *,
   ::before,
   ::after {
@@ -41,13 +44,16 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: ${global.fontFamily};
     font-size: ${global.normalFontSize};
-    background-color: ${({ theme }) => theme.primary};
+    background-color: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.textColor};
+    line-height: 1.5;
   }
-  
-  #root {
-    display: flex;
-    height: 100vh;
+  body:nth-child(2){
+    margin-top: ${global.headerHeight}rem;
+  }
+
+  h1, h2,h3,h4 {
+    line-height: 1.1;
   }
 
   h1,
@@ -58,6 +64,12 @@ export const GlobalStyles = createGlobalStyle`
   p {
     margin: 0;
     padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  p {
+    max-width: 60ch;
   }
 
   ul,li {
@@ -75,18 +87,25 @@ export const GlobalStyles = createGlobalStyle`
     display: block;
   }
 
-  .flex {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .card {
-    padding: 2rem;
-    box-shadow: ${global.shadow};
-    border-radius: ${global.borderRadious}rem;
 
-    &:hover {
-      box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadowHover}`};
-    }
+#root > * {
+  /* grid-column: 2; */
+}
+
+  #root, 
+  .wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(760px, 100%)
+    1fr;
   }
+  .wrapper > * {
+    grid-column: 2;
+  }
+  .full-bleed {
+    width: 100%;
+    grid-column: 1 / -1;
+  } 
 `;

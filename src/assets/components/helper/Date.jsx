@@ -24,6 +24,7 @@ const Date = ({ inicio, fim }) => {
       <Icon className='bx bx-calendar-alt'></Icon>
       {inicio}
       <Icon className='bx bxs-right-arrow-alt'></Icon>
+      <Icon className='bx bx-calendar-alt'></Icon>
       {fim}
     </StyledSpan>
   );

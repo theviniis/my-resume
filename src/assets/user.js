@@ -12,8 +12,10 @@ const user = {
     instagram: '_viniis',
   },
 
-  description:
-    'Estudante de desenvolvimento front-end em busca oportunidade para iniciar na área, com objetivo de agregar no setor de front-end enquanto aprimoro as minhas capacidades pessoais e profissionais. Muito interesse pelas ferramentas React.JS e JavaScript. Com facilidade e disposição para aprender, encarando desafios com esforço e dedicação.',
+  description: [
+    'Front-end developer student looking for an opportunity to start working as a developer, with the goal to enhance my personal and professional skills with intensive classes, certifications and open source contributions.',
+    'Very interested in React.JS with Styled Components andJavaScript tooling.',
+  ],
 
   education: {
     faculdade: 'Universidade Estácio',
@@ -109,6 +111,8 @@ const user = {
       ],
     },
   ],
+
+  sections: ['Home', 'Skills', 'Portfolio', 'Experience'],
 };
 
 export default user;
