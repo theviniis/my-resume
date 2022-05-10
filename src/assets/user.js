@@ -18,33 +18,20 @@ const user = {
   ],
 
   education: {
-    faculdade: 'Universidade Estácio',
-    curso: 'Análise e Desenvolvimento de Sistemas',
+    faculdade: 'Estácio University',
+    curso: 'Analysis and Systems Development',
     inicio: 'Jun - 2019',
-    final: 'Dez - 2023',
+    final: 'Dec - 2023',
   },
-
-  // skills: [
-  //   'HTML5',
-  //   'CSS3',
-  //   'JavaScript',
-  //   'React',
-  //   'PHP',
-  //   'SEO',
-  //   'Styled',
-  //   'Git',
-  //   'Bootstrap',
-  //   'WordPress',
-  // ],
 
   languages: [
     {
-      language: 'Portugues',
-      level: 'Nativo',
+      language: 'Portuguese',
+      level: 'Native',
     },
     {
-      language: 'Inglês',
-      level: 'Avançado',
+      language: 'English',
+      level: 'Advanced',
     },
   ],
 
@@ -52,26 +39,26 @@ const user = {
     {
       job: 'Freelancer',
       company: 'Espaço Plannar',
-      startDate: 'Mai - 2021',
+      startDate: 'May - 2021',
       endDate: 'Jul - 2021',
       description:
         'Desenvolvimento da landing page espacoplannar.com.br/ em HTML, CSS e JavaScript com base no layout estabelecido pelo designer, posteriormente convertido para Wordpress para que o cliente possa utilizar custom fields (CMS), customizando assim, as informações do website.',
       skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
     },
     {
-      job: 'Analista de Suporte',
+      job: 'Suport Analyst',
       company: 'AlmavivA do Brasil',
       startDate: 'Jul - 2018',
-      endDate: 'Out - 2021',
+      endDate: 'Oct - 2021',
       description:
         'Receber demandas externas, analisar problemáticas, definir soluções, efetuar correções, prestar suporte técnico e atendimento aos clientes, realizar atualizações cadastrais, clarificar processos com base no modelo de negócio e procedimentos preestabelecidos pela companhia de maneira eficiente.',
       skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
     },
     {
-      job: 'Analista de Suporte',
+      job: 'Suport Analyst',
       company: 'Central de Funcionamento',
-      startDate: 'Abr - 2016',
-      endDate: 'Dez - 2017',
+      startDate: 'Apr - 2016',
+      endDate: 'Dec - 2017',
       description:
         'Suporte a clientes, esclarecimento de dúvidas, resolução de dificuldades relacionadas a problemas de informática, com a finalidade de garantir o bom funcionamento da rede, tais como configurações de modem, roteadores e repetidores, impressoras, antivírus, e-mail e aparelhos eletrônicos.',
       skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
@@ -83,31 +70,37 @@ const user = {
       course: 'Desenvolvedor Web',
       hours: 13.5,
       school: 'HCode',
+      href: '',
     },
     {
       course: 'Web Design',
       hours: 44,
       school: 'Origamid',
+      href: '',
     },
     {
       course: 'CSS Flexbox',
       hours: 6,
       school: 'Origamid',
+      href: '',
     },
     {
       course: 'CSS Grid Layout',
       hours: 10,
       school: 'Origamid',
+      href: '',
     },
     {
       course: 'JavaScript ES6',
       hours: 74,
       school: 'Origamid',
+      href: '',
     },
     {
       course: 'React',
       hours: 36,
       school: 'Origamid',
+      href: '',
     },
   ],
 

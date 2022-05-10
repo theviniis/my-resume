@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionIntro, Wrapper } from '../../styles/styles';
+import { Card, SectionIntro, Wrapper } from '../../styles/styles';
 import user from '../../user';
 import Section from '../helper/Section';
 import Date from '../helper/Date';
@@ -32,15 +32,10 @@ const List = styled.ul`
   gap: 2ch;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled(Card)`
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2ch;
-  background-color: black;
-  border-radius: ${global.borderRadious}rem;
-  padding: 2ch;
-
-  position: relative;
 
   &::before {
     content: '';
@@ -64,13 +59,11 @@ const ListItem = styled.li`
   > div {
     display: flex;
     flex-direction: column;
-    /* gap: 2ch; */
     ${Title} {
       margin-block-end: 1.5ch;
-      position: relative;
     }
 
-    > span {
+    span {
       margin-block-end: 0.5ch;
     }
   }
@@ -83,7 +76,7 @@ const ListItem = styled.li`
 
 const Experience = () => {
   return (
-    <Container as='section'>
+    <Container as='div'>
       <Content name='Experience'>
         <List>
           <SectionIntro>
@@ -93,7 +86,7 @@ const Experience = () => {
           </SectionIntro>
           {user.experience.map(
             ({ job, company, startDate, endDate, description, skills }) => (
-              <ListItem key={company}>
+              <ListItem as='li' key={company}>
                 <div>
                   <Title fontSize={global.normalFontSize}>{company}</Title>
                   <Date inicio={startDate} fim={endDate} />

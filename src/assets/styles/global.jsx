@@ -17,7 +17,7 @@ export const global = {
   mb2: 1,
   mb3: 2,
 
-  borderRadious: 0.25, // rem,
+  borderRadious: 0.5, // rem,
 
   headerHeight: 4, // rem
   maxWidth: 1000,
@@ -71,6 +71,7 @@ export const GlobalStyles = createGlobalStyle`
   p {
     max-width: 60ch;
     margin-block: 0 !important;
+    
   }
 
   ul,li {

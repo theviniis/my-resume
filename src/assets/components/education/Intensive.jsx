@@ -1,8 +1,7 @@
 import React from 'react';
 import user from '../../user';
 import styled from 'styled-components';
-import { SectionIntro, SubTitle, Title, TitleLight } from '../../styles/styles';
-import { global } from '../../styles/global';
+import { Card, SubTitle, Title, TitleLight } from '../../styles/styles';
 import Icon from './Icon';
 
 const Container = styled.div`
@@ -12,20 +11,11 @@ const List = styled.ul`
   grid-column: 2;
   display: grid;
   gap: 2ch;
-  /* flex-wrap: wrap; */
-  /* flex-direction: column; */
   grid-template-columns: repeat(auto-fill, 213px);
-  /* gap: 2ch; */
-  /* justify-content: space-between; */
 `;
-const Item = styled.li`
-  background-color: black;
-  border-radius: ${global.borderRadious}rem;
-  padding: 2ch;
+const Item = styled(Card)`
   flex-direction: column;
   height: 120px;
-
-  position: relative;
 
   &::before {
     content: '';
@@ -38,6 +28,10 @@ const Item = styled.li`
     border-top-left-radius: 0.115rem;
     border-bottom-left-radius: 0.115rem;
     background-color: ${(props) => props.theme.primary};
+  }
+
+  ${TitleLight} {
+    font-size: 1rem;
   }
 
   &,
@@ -59,10 +53,10 @@ const EducationList = () => {
     <Container>
       <Icon icon='bx bxs-book-alt' />
 
-      <SubTitle>Cursos Intensivos</SubTitle>
+      <SubTitle>intensive courses</SubTitle>
       <List>
         {user.courses.map((cur) => (
-          <Item>
+          <Item as='li'>
             <Title>{cur.course}</Title>
             <Content>
               <span>{cur.school}</span>

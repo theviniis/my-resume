@@ -15,13 +15,12 @@ export const SubTitle = styled.h3`
   margin-block-end: 2ch;
   line-height: 1;
   letter-spacing: 1px;
-  /* position: relative; */
 `;
 
 export const TitleLight = styled.h3`
-  font-weight: 300;
+  /* font-weight: 300; */
   color: #a3a3a3;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 0.875rem;
   letter-spacing: 1px;
 `;
@@ -34,6 +33,7 @@ export const Icon = styled.i`
 export const Description = styled.p`
   font-size: clamp(1rem, 1vw, 1.125rem);
   color: ${(props) => props.theme.textColor};
+  font-weight: 300;
 `;
 
 export const SectionIntro = styled(Description)`
@@ -48,11 +48,14 @@ export const SectionIntro = styled(Description)`
 `;
 
 export const Card = styled.div`
-  padding: 2rem;
-  box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadow}`};
+  background-color: black;
+  position: relative;
+
+  padding: 2ch;
+  /* box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadow}`}; */
   border-radius: ${global.borderRadious}rem;
   margin-top: ${({ marginTop }) => marginTop || ''};
-  gap: ${({ gap }) => gap || ''};
+  /* gap: ${({ gap }) => gap || ''}; */
 
   &:hover {
     box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadowHover}`};

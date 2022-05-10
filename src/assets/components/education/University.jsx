@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SubTitle, Title, TitleLight } from '../../styles/styles';
+import { Card, SubTitle, Title, TitleLight } from '../../styles/styles';
 import user from '../../user';
 import Date from '../helper/Date';
 import Icon from './Icon';
@@ -9,10 +9,7 @@ const Container = styled.div`
   position: relative;
 `;
 
-const Card = styled.div`
-  background-color: black;
-  border-radius: ${global.borderRadious}rem;
-  padding: 2ch;
+const Content = styled(Card)`
   display: flex;
   flex-direction: column;
   height: 140px;
@@ -35,9 +32,11 @@ const Card = styled.div`
 
   ${TitleLight} {
     margin-block-end: 1ch;
+    text-transform: uppercase;
+    font-weight: 400;
   }
+
   span {
-    font-weight: 300;
     color: #a3a3a3;
   }
   span {
@@ -49,13 +48,13 @@ const University = () => {
   return (
     <Container>
       <Icon icon='bx bxs-graduation' />
+      <SubTitle>University</SubTitle>
 
-      <SubTitle>Formação Acadêmica</SubTitle>
-      <Card>
+      <Content>
         <TitleLight>{user.education.faculdade}</TitleLight>
         <Title>{user.education.curso}</Title>
         <Date inicio={user.education.inicio} fim={user.education.final} />
-      </Card>
+      </Content>
     </Container>
   );
 };

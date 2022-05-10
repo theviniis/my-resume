@@ -9,12 +9,6 @@ const StyledSpan = styled.span`
   letter-spacing: -0.5px;
   gap: ${global.mb1 / 2}rem;
 
-  /* font-weight: 300; */
-  /* color: #a3a3a3; */
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-
   > i {
     font-size: 1rem;
     color: ${({ theme }) => theme.secondary};
