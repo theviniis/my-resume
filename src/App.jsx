@@ -6,6 +6,9 @@ import { GlobalStyles } from './assets/styles/global';
 import Header from './assets/components/header/Header';
 import Hero from './assets/components/hero/Hero';
 import { Wrapper } from './assets/styles/styles';
+import Skills from './assets/components/skills/Skills';
+import Experience from './assets/components/experience/Experience';
+import Education from './assets/components/education/Education';
 
 function App() {
   const theme = React.useContext(GlobalContext);
@@ -14,8 +17,11 @@ function App() {
       <Header />
       <Wrapper>
         <Hero />
-        <GlobalStyles />
+        <Experience />
+        <Skills />
+        <Education />
       </Wrapper>
+      <GlobalStyles />
     </ThemeProvider>
   );
 }

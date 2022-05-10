@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { Wrapper } from '../../styles/styles';
 import HeroButton from '../helper/HeroButton';
 import Illustration from './Illustration';
+import { Description } from '../../styles/styles';
 
 const Container = styled(Wrapper)`
-  padding-block: 8ch;
+  padding-block: 6ch;
   grid-column: 1/-1;
 
   svg {
@@ -13,7 +14,7 @@ const Container = styled(Wrapper)`
     z-index: -1;
     grid-column: 2 / -1;
     grid-row: 1;
-    margin-left: 340px;
+    margin-left: 425px;
   }
 `;
 
@@ -23,26 +24,21 @@ const Content = styled.div`
   justify-content: center;
   grid-column: 2;
   grid-row: 1;
-  max-width: 360px;
+  max-width: 475px;
+  button {
+    margin-block-start: 4ch;
+  }
 `;
 const Title = styled.h1`
   font-size: clamp(4rem, 4.5vw, 6rem);
   font-weight: 600;
-  margin-bottom: 2rem;
-`;
-const Description = styled.p`
-  font-size: clamp(1rem, 1vw, 1.125rem);
-
-  margin-bottom: 2rem;
-  span {
-    display: block;
-    margin-top: 1.5ch;
-  }
+  margin-bottom: 2.5rem;
+  color: ${(props) => props.theme.titleColor};
 `;
 
 const Hero = () => {
   return (
-    <Container className='full-bleed wrapper' id='hero'>
+    <Container className='full-bleed wrapper' as='section' id='hero'>
       <Content>
         <Title>Hi, I am Vinícius</Title>
         <Description>

@@ -15,6 +15,7 @@ const Button = styled.button`
   font-family: inherit;
   width: 12rem;
   height: auto;
+  /* color: ${(props) => props.theme.titleColor}; */
 
   &:hover {
     .circle {
@@ -25,7 +26,7 @@ const Button = styled.button`
       transform: translate(1rem, 0);
     }
     .button-text {
-      color: #fff;
+      color: ${(props) => props.theme.bg};
     }
   }
 
@@ -79,8 +80,8 @@ const Text = styled.span`
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: ${(props) => props.theme.textColor};
-  font-weight: 600;
+  color: ${(props) => props.theme.titleColor};
+  font-weight: 700;
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;

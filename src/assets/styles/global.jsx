@@ -17,10 +17,10 @@ export const global = {
   mb2: 1,
   mb3: 2,
 
-  borderRadious: 0.5, // rem,
+  borderRadious: 0.25, // rem,
 
   headerHeight: 4, // rem
-  maxWidth: 760,
+  maxWidth: 1000,
 
   shadow: '2px 2px 6px rgba(0, 0, 0, 0.15)',
   shadowHover: '2px 2px 6px rgba(0, 0, 0, 0.20)',
@@ -70,6 +70,7 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     max-width: 60ch;
+    margin-block: 0 !important;
   }
 
   ul,li {
@@ -85,5 +86,9 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  b {
+    font-weight: 600;
   }
 `;

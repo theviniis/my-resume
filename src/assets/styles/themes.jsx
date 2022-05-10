@@ -1,10 +1,10 @@
 export const light = {
   name: 'light',
-  bg: 'hsl(0, 0%, 96%)',
+  bg: 'hsl(0, 0%, 97%)',
   primary: '#219ebc',
   secondary: '#219ebc',
   titleColor: '#0b0a0a',
-  textColor: '#403a3a',
+  textColor: '#404040',
   navColor: 'white',
 };
 

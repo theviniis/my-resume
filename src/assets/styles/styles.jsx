@@ -2,40 +2,28 @@ import styled from 'styled-components';
 import { global } from '../styles/global';
 
 export const Title = styled.h1`
-  font-size: ${({ fontSize }) => fontSize || `${global.h1FontSize}`};
-  font-weight: ${({ fontWeight }) => fontWeight || `${global.fontMedium}`};
-  text-align: ${({ textAlign }) => textAlign || 'center'};
-  text-transform: ${({ textTransform }) => textTransform || 'uppercase'};
-  margin-bottom: 0.25rem;
+  font-size: clamp(1.125rem, 1vw, 2rem);
+  font-weight: ${({ fontWeight }) => fontWeight || '600'};
+  /* margin-bottom: 0.25rem; */
 `;
 
-export const SubTitle = styled.h2`
-  font-size: ${({ fontSize }) => fontSize || `${global.h2FontSize}`};
-  font-weight: ${({ fontWeight }) => fontWeight || `${global.fontSemiBold}`};
-  text-align: ${({ textAlign }) => textAlign || ''};
-  margin-bottom: 1rem;
+export const SubTitle = styled.h3`
+  color: ${(props) => props.theme.primary};
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block-end: 2ch;
+  line-height: 1;
+  letter-spacing: 1px;
+  /* position: relative; */
 `;
 
-export const StyledH3 = styled.h3`
-  font-size: ${({ fontSize }) => fontSize || `${global.smallFontSize}`};
-  text-transform: ${({ textTransform }) => textTransform || ''};
-  text-align: ${({ textAlign }) => textAlign || ''};
-  font-weight: ${({ fontWeight }) => fontWeight || `${global.fontMedium}`};
-  text-align: ${({ textAlign }) => textAlign || ''};
-  margin-bottom: ${({ marginBottom }) => marginBottom || ''};
-  /* color: ${({ theme }) => theme.secondary}; */
-`;
-
-export const SmallSubTitle = styled(StyledH3)`
-  font-weight: ${({ fontWeight }) => fontWeight || 400};
-  color: ${(props) => props.theme.textColor};
-`;
-
-export const ColorH3 = styled.h3`
-  font-size: ${global.normalFontSize};
-  color: ${({ theme }) => theme.secondary};
-  font-weight: ${global.fontMedium};
-  margin-bottom: ${({ marginBottom }) => marginBottom || ''};
+export const TitleLight = styled.h3`
+  font-weight: 300;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
 `;
 
 export const Icon = styled.i`
@@ -44,8 +32,19 @@ export const Icon = styled.i`
 `;
 
 export const Description = styled.p`
-  font-size: ${global.normalFontSize};
-  line-height: 1.3;
+  font-size: clamp(1rem, 1vw, 1.125rem);
+  color: ${(props) => props.theme.textColor};
+`;
+
+export const SectionIntro = styled(Description)`
+  color: #a3a3a3;
+  max-width: 80%;
+  font-size: clamp(1rem, 1.5vw, 1.13rem);
+
+  padding-block-end: 2rem;
+  & strong {
+    color: white;
+  }
 `;
 
 export const Card = styled.div`
