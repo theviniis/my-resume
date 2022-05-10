@@ -96,7 +96,7 @@ const Experience = () => {
                   <Title>{job}</Title>
                   <ul>
                     {skills.map((skill) => (
-                      <Badger skill={skill} />
+                      <Badger name={skill} />
                     ))}
                   </ul>
                 </div>

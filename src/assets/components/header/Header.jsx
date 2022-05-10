@@ -31,7 +31,7 @@ const Header = () => {
       <Nav>
         <Profile />
         <NavList />
-        <Button name='Contact' href='#contact' />
+        <Button href='#contact'>Contact</Button>
       </Nav>
     </Container>
   );

@@ -19,15 +19,15 @@ const Btn = styled.button`
   text-transform: uppercase;
 `;
 
-const Button = ({ name, href, color }) => {
+const Button = ({ children, name, href, color }) => {
   if (href)
     return (
       <a href={href}>
-        <Btn>{name}</Btn>
+        <Btn>{children}</Btn>
       </a>
     );
 
-  return <Btn>{name}</Btn>;
+  return <Btn>{children}</Btn>;
 };
 
 export default Button;

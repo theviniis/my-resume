@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { global } from '../styles/global';
 
 export const Title = styled.h1`
-  font-size: clamp(1.125rem, 1vw, 2rem);
+  font-size: clamp(1.1rem, 1vw, 1.125rem);
   font-weight: ${({ fontWeight }) => fontWeight || '600'};
   /* margin-bottom: 0.25rem; */
 `;
@@ -50,16 +50,9 @@ export const SectionIntro = styled(Description)`
 export const Card = styled.div`
   background-color: black;
   position: relative;
-
   padding: 2ch;
-  /* box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadow}`}; */
   border-radius: ${global.borderRadious}rem;
   margin-top: ${({ marginTop }) => marginTop || ''};
-  /* gap: ${({ gap }) => gap || ''}; */
-
-  &:hover {
-    box-shadow: ${({ boxShadow }) => boxShadow || `${global.shadowHover}`};
-  }
 `;
 
 export const ContentCard = styled.section`

@@ -9,6 +9,7 @@ import { Wrapper } from './assets/styles/styles';
 import Skills from './assets/components/skills/Skills';
 import Experience from './assets/components/experience/Experience';
 import Education from './assets/components/education/Education';
+import Portifolio from './assets/components/portfolio/Portifolio';
 
 function App() {
   const theme = React.useContext(GlobalContext);
@@ -20,6 +21,7 @@ function App() {
         <Experience />
         <Skills />
         <Education />
+        <Portifolio />
       </Wrapper>
       <GlobalStyles />
     </ThemeProvider>

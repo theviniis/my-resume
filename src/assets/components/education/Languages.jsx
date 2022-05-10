@@ -6,7 +6,6 @@ import Icon from './Icon';
 
 const Container = styled.div`
   margin-block-start: 2ch;
-
   position: relative;
 `;
 
@@ -16,7 +15,6 @@ const Item = styled.li`
 `;
 
 const Level = styled(TitleLight)`
-  /* font-weight: 400; */
   font-size: 1rem;
 
   letter-spacing: initial;

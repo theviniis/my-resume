@@ -1,6 +1,6 @@
 export const light = {
   name: 'light',
-  bg: 'hsl(0, 0%, 97%)',
+  bg: 'white',
   primary: '#219ebc',
   secondary: '#219ebc',
   titleColor: '#0b0a0a',

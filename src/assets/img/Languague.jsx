@@ -32,8 +32,8 @@ const Languague = () => {
           y2='22'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#219ebc'></stop>
-          <stop offset='1' stop-color='#219ebc'></stop>
+          <stop stopColor='#219ebc'></stop>
+          <stop offset='1' stopColor='#219ebc'></stop>
         </linearGradient>
       </defs>
     </Icon>
