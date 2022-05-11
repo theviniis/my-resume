@@ -7,7 +7,7 @@ import Date from '../helper/Date';
 import { Description } from '../../styles/styles';
 import { global } from '../../styles/global';
 import { Title } from '../../styles/styles';
-import Badger from './Badger';
+import Badger from '../helper/Badger';
 
 const Container = styled(Wrapper)`
   grid-column: 1 / -1;

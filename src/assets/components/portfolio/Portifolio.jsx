@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import user from '../../user';
 import Section from '../helper/Section';
-import Plannar from './Plannar';
+import Item from './src/Item';
 
 const Container = styled(Section)`
   grid-column: 2 / -1;
@@ -9,51 +10,40 @@ const Container = styled(Section)`
 
 const List = styled.ul`
   display: grid;
-  grid-template-columns: 0.75fr 1fr 0.75fr;
+  grid-template-columns: 1fr 340px 1fr;
   grid-template-areas: 'left main right';
   gap: 2ch;
   align-items: center;
   padding-inline-end: 10ch;
-  opacity: 0.8;
-
-  > li:nth-child(1) {
-    grid-area: main;
-    background-color: black;
-  }
-
-  .active {
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
-    /* grid-template-areas: 'main main' 'left right'; */
-    /* background-color: hsl(0, 0%, 7%); */
-    /* grid-column: 2; */
-    min-width: 600px;
-    opacity: 1;
-  }
+  transition: 0.3 ease-in-out;
+  /* transform: scale(80%); */
 `;
 
 const Portifolio = () => {
-  const [active, setActive] = React.useState(false);
-  function handleClick(event) {
-    setActive(!active);
-    // handleOutsideClick(event);
-  }
+  const [selected, setSelected] = React.useState(0);
 
-  function handleOutsideClick(event) {
-    console.log(event.target);
-    console.log(event.currentTarget);
-    console.log(active);
-
-    if (event.target === event.currentTarget) setActive(false);
-    setActive(!active);
-  }
+  const toggle = (index) => {
+    if (selected === index) {
+      return setSelected(null);
+    }
+    setSelected(index);
+  };
 
   return (
     <Container name='Portifolio'>
-      <List onClick={handleOutsideClick}>
-        <Plannar className={active ? 'active' : null} name='main' />
-        <Plannar className={active ? 'active' : null} name='left' />
-        <Plannar className={active ? 'active' : null} name='right' />
+      <List>
+        {user.portfolio.map((item, index) => (
+          <Item
+            index={index}
+            selected={selected}
+            key={item.name}
+            toggle={toggle}
+            name={item.name}
+            badgers={item.skills}
+            img={item.img}
+            description={item.description}
+          />
+        ))}
       </List>
     </Container>
   );

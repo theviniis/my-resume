@@ -140,6 +140,27 @@ const user = {
       level: 60,
     },
   ],
+
+  portfolio: [
+    {
+      name: 'Espaço Plannar',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      img: 'plannar.jpg',
+      skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress', 'CMS'],
+    },
+    {
+      name: 'E-Shoots',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      img: 'plannar.jpg',
+      skills: ['HTML', 'CSS', 'Ruby On Rails', 'SASS', 'UX Design'],
+    },
+    {
+      name: 'Dogs',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      img: 'plannar.jpg',
+      skills: ['HTML', 'CSS', 'React'],
+    },
+  ],
 };
 
 export default user;

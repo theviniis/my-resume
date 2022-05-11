@@ -2,13 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Badger from '../experience/Badger';
 import Button from '../helper/Button';
-import {
-  Card,
-  Description,
-  SubTitle,
-  Title,
-  TitleLight,
-} from '../../styles/styles';
+import { Card, Title } from '../../styles/styles';
 import { global } from '../../styles/global';
 
 const Item = styled(Card)`
@@ -65,18 +59,6 @@ const Badgers = styled.ul`
 `;
 
 const Plannar = ({ className, name }) => {
-  const [active, setActive] = React.useState(false);
-
-  function handleClick(event) {
-    // console.log(event.target);
-    // console.log(event.currentTarget);
-    // console.log(active);
-    // setActive(!active);
-    // handleOutsideClick(event);
-  }
-  function handleOutsideClick(event) {
-    if (event.target === event.currentTarget) setActive(false);
-  }
   return (
     <Item as='li' onClick={handleClick} className={className}>
       <Image>
