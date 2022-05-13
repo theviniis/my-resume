@@ -1,14 +1,14 @@
 import React from 'react';
-import { light } from './styles/themes';
+import themes from './styles/themes';
 
 export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [active, setActive] = React.useState(false);
-  const [theme, setTheme] = React.useState(light.name);
+  const [theme, setTheme] = React.useState(themes.light.name);
 
   function themeToggle() {
-    theme === light.name ? setTheme('dark') : setTheme('light');
+    theme === themes.light.name ? setTheme('dark') : setTheme('light');
   }
 
   return (

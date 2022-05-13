@@ -12,6 +12,9 @@ const Item = styled(Card)`
   ${Title} {
     margin-block-end: 1.5ch;
   }
+  ${Description} {
+    font-size: 0.965rem;
+  }
 `;
 
 const Company = styled.div`
@@ -49,8 +52,8 @@ const ExperienceItem = ({
       <Job>
         <Title theme={theme}>{job}</Title>
         <ul>
-          {skills.map((skill) => (
-            <Badger name={skill} theme={theme} />
+          {skills.map((skill, index) => (
+            <Badger name={skill} theme={theme} key={`${skills}${index}`} />
           ))}
         </ul>
       </Job>

@@ -8,6 +8,11 @@ export const Heading = styled.h2`
   max-width: 4ch;
   text-transform: uppercase;
   word-break: break-all;
+  @media (max-width: 840px) {
+    font-size: clamp(3rem, 3vw, 4rem);
+    margin-block-end: 1ch;
+    word-break: initial;
+  }
 `;
 
 export const Title = styled.h3`
@@ -58,7 +63,7 @@ export const Wrapper = styled.section`
   display: grid;
   grid-template-columns:
     1fr
-    min(${global.maxWidth}px, 100%)
+    min(${global.maxWidth}px, 80%)
     1fr;
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.fcText};

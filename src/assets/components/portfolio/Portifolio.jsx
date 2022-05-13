@@ -1,49 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import user from '../../user';
+import themes from '../../styles/themes';
 import Section from '../helper/Section';
-import Item from './src/Item';
+import PortifolioList from './src/PortifolioList';
 
 const Container = styled(Section)`
   grid-column: 2 / -1;
+  margin-inline-end: 5%;
 `;
 
-const List = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 340px 1fr;
-  grid-template-areas: 'left main right';
-  gap: 2ch;
-  align-items: center;
-  padding-inline-end: 10ch;
-  transition: 0.3 ease-in-out;
-`;
-
-const Portifolio = () => {
-  const [selected, setSelected] = React.useState(0);
-
-  const toggle = (index) => {
-    if (selected === index) {
-      return setSelected(null);
-    }
-    setSelected(index);
-  };
-
+const Portifolio = ({ theme }) => {
   return (
-    <Container name='Portifolio'>
-      <List>
-        {user.portfolio.map((item, index) => (
-          <Item
-            index={index}
-            selected={selected}
-            key={item.name}
-            toggle={toggle}
-            name={item.name}
-            badgers={item.skills}
-            img={item.img}
-            description={item.description}
-          />
-        ))}
-      </List>
+    <Container name='Portifolio' theme={themes.light}>
+      <PortifolioList themes={themes} />
     </Container>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Intro, Wrapper } from '../../styles/styles';
+import { Intro } from '../../styles/styles';
 import Section from '../helper/Section';
 
 import Intensive from './Intensive';

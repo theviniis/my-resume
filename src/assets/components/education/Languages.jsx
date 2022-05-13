@@ -30,7 +30,7 @@ const Languages = ({ theme }) => {
       <SubTitle>Languages</SubTitle>
       <ul>
         {user.languages.map((lang) => (
-          <Item>
+          <Item key={lang.language}>
             {lang.language}
             <Level theme={theme}>: {lang.level}</Level>
           </Item>

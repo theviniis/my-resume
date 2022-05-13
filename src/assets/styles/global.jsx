@@ -28,7 +28,6 @@ export const global = {
 
 export const GlobalStyles = createGlobalStyle`
 
-
   *,
   ::before,
   ::after {
@@ -75,6 +74,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ul,li {
+
+
     list-style: none;
   }
 
@@ -91,6 +92,20 @@ export const GlobalStyles = createGlobalStyle`
 
   b {
     font-weight: 600;
+  }
+
+  /* Splide */
+  .splide__track--nav>.splide__list>.splide__slide.is-active {
+    border: none;
+    transform: initial;
+
+    div{
+    }
+  }
+
+  .splide__track--nav>.splide__list>.splide__slide {
+    border: none;
+    transform: scale(80%);
   }
 
 `;

@@ -160,6 +160,24 @@ const user = {
       img: 'plannar.jpg',
       skills: ['HTML', 'CSS', 'React'],
     },
+    {
+      name: 'Dogs',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      img: 'plannar.jpg',
+      skills: ['HTML', 'CSS', 'React'],
+    },
+    {
+      name: 'Dogs',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      img: 'plannar.jpg',
+      skills: ['HTML', 'CSS', 'React'],
+    },
+    {
+      name: 'Dogs',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      img: 'plannar.jpg',
+      skills: ['HTML', 'CSS', 'React'],
+    },
   ],
 };
 

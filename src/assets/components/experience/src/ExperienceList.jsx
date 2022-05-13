@@ -21,6 +21,7 @@ const ExperienceList = ({ theme }) => {
       {user.experience.map(
         ({ job, company, startDate, endDate, description, skills }) => (
           <ExperienceItem
+            key={company}
             theme={theme}
             job={job}
             company={company}

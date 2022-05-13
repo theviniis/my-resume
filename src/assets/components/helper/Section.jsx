@@ -9,6 +9,10 @@ const Content = styled.div`
   padding-block: 6ch;
   column-gap: 10ch;
 
+  @media (max-width: 840px) {
+    grid-template-columns: 1fr;
+  }
+
   ${Heading} {
     grid-row: span 4;
   }

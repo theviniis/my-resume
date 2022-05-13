@@ -43,8 +43,8 @@ const EducationList = ({ theme }) => {
 
       <SubTitle>intensive courses</SubTitle>
       <List>
-        {user.courses.map((cur) => (
-          <Item as='li' theme={theme}>
+        {user.courses.map((cur, i) => (
+          <Item as='li' theme={theme} key={`${cur.course}${i}`}>
             <Title theme={theme}>{cur.course}</Title>
             <Content>
               <span>{cur.school}</span>
