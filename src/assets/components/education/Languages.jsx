@@ -7,6 +7,7 @@ import Icon from './Icon';
 const Container = styled.div`
   margin-block-start: 2ch;
   position: relative;
+  color: ${({ theme }) => theme.subTitle};
 `;
 
 const Item = styled.li`
@@ -16,21 +17,22 @@ const Item = styled.li`
 
 const Level = styled(TitleLight)`
   font-size: 1rem;
+  color: ${({ theme }) => theme.cText};
 
   letter-spacing: initial;
   text-transform: capitalize;
 `;
 
-const Languages = () => {
+const Languages = ({ theme }) => {
   return (
-    <Container>
+    <Container theme={theme}>
       <Icon icon='language' />
       <SubTitle>Languages</SubTitle>
       <ul>
         {user.languages.map((lang) => (
           <Item>
             {lang.language}
-            <Level>: {lang.level}</Level>
+            <Level theme={theme}>: {lang.level}</Level>
           </Item>
         ))}
       </ul>

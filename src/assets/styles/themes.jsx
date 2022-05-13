@@ -1,37 +1,22 @@
 export const light = {
   name: 'light',
-  bg: 'white',
   primary: '#219ebc',
   secondary: '#219ebc',
-  titleColor: '#0b0a0a',
-  textColor: '#404040',
-  navColor: 'white',
+  fcTitle: '#e0e0e0',
+  fcText: '#141414',
+  SubTitleColor: '#141414',
+  card: '#f5f5f5',
+  bg: '#FFF',
 };
 
 export const dark = {
   name: 'dark',
-  primary: '#1C1C1C',
-  secondary: `${light.secondary}`,
-  text: '#FFF',
+  primary: '#219ebc',
+  secondary: '#219ebc',
+  fcTitle: '#000',
+  fcText: '#a3a3a3',
+  subTitle: '#FFF',
 
-  titleColor: '#fff',
-  textColor: '#eee',
-  textColorLight: '#707070',
-};
-
-export const orange = {
-  name: 'orange',
-  primary: '#e9eaf0',
-  secondary: '#7CC6FE',
-  titleColor: '#0b0a0a',
-  textColor: '#333',
-};
-
-export const grey = {
-  name: 'light',
-  primary: '#e4e4f0',
-  secondary: '#383F51', //70D6FF
-  titleColor: '#0b0a0a',
-  textColor: '#333',
-  navColor: 'white',
+  card: '#000',
+  bg: '#141414',
 };

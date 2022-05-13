@@ -1,29 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Wrapper, Heading, Description } from '../../styles/styles';
 
-const Content = styled.section`
+const Content = styled.div`
+  grid-column: 2;
   display: grid;
   grid-template-columns: 220px 1fr;
   padding-block: 6ch;
   column-gap: 10ch;
-`;
-const Title = styled.h2`
-  font-size: clamp(4rem, 5vw, 8rem);
-  margin-block-end: 1ch;
-  font-weight: 700;
-  max-width: 4ch;
-  color: #e0e0e0;
-  text-transform: uppercase;
-  word-break: break-all;
-  grid-row: 1 / -1;
+
+  ${Heading} {
+    grid-row: span 4;
+  }
+
+  ${Description} {
+    color: ${({ theme }) => theme.fcText};
+  }
 `;
 
-const Section = ({ name, children, className }) => {
+const Section = ({ name, children, className, theme }) => {
   return (
-    <Content className={className} id={name.toLowerCase()}>
-      {name ? <Title>{name}</Title> : null}
-      {children}
-    </Content>
+    <Wrapper as='section' theme={theme}>
+      <Content className={className} id={name.toLowerCase()} theme={theme}>
+        {name ? <Heading theme={theme}>{name}</Heading> : null}
+        {children}
+      </Content>
+    </Wrapper>
   );
 };
 

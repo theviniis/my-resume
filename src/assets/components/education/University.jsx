@@ -17,43 +17,31 @@ const Content = styled(Card)`
   position: relative;
   margin-block-end: 2ch;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 4px;
-    height: 20px;
-    top: 2ch;
-    left: -4px;
-    border-top-left-radius: 0.115rem;
-    border-bottom-left-radius: 0.115rem;
-    background-color: ${(props) => props.theme.primary};
-  }
-
   ${TitleLight} {
     margin-block-end: 1ch;
     text-transform: uppercase;
-    font-weight: 400;
   }
 
-  span {
-    color: #a3a3a3;
-  }
   span {
     margin-top: auto;
   }
 `;
 
-const University = () => {
+const University = ({ theme }) => {
   return (
     <Container>
       <Icon icon='bx bxs-graduation' />
       <SubTitle>University</SubTitle>
 
-      <Content>
-        <TitleLight>{user.education.faculdade}</TitleLight>
-        <Title>{user.education.curso}</Title>
-        <Date inicio={user.education.inicio} fim={user.education.final} />
+      <Content theme={theme}>
+        <TitleLight theme={theme}>{user.education.faculdade}</TitleLight>
+        <Title theme={theme}>{user.education.curso}</Title>
+        <Date
+          inicio={user.education.inicio}
+          fim={user.education.final}
+          theme={theme}
+          color={theme.fcText}
+        />
       </Content>
     </Container>
   );

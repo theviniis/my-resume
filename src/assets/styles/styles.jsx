@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 import { global } from '../styles/global';
 
-export const Title = styled.h1`
+export const Heading = styled.h2`
+  color: ${({ theme }) => theme.fcTitle};
+  font-size: clamp(4rem, 5vw, 8rem);
+  font-weight: 700;
+  max-width: 4ch;
+  text-transform: uppercase;
+  word-break: break-all;
+`;
+
+export const Title = styled.h3`
   font-size: clamp(1.1rem, 1vw, 1.125rem);
   font-weight: ${({ fontWeight }) => fontWeight || '600'};
-  /* margin-bottom: 0.25rem; */
+  color: ${({ theme }) => theme.subTitle};
 `;
 
 export const SubTitle = styled.h3`
@@ -19,7 +28,7 @@ export const SubTitle = styled.h3`
 
 export const TitleLight = styled.h3`
   /* font-weight: 300; */
-  color: #a3a3a3;
+  color: ${(props) => props.theme.fcText};
   /* text-transform: uppercase; */
   font-size: 0.875rem;
   letter-spacing: 1px;
@@ -32,48 +41,45 @@ export const Icon = styled.i`
 
 export const Description = styled.p`
   font-size: clamp(1rem, 1vw, 1.125rem);
-  color: ${(props) => props.theme.textColor};
   font-weight: 300;
 `;
 
-export const SectionIntro = styled(Description)`
-  color: #a3a3a3;
+export const Intro = styled(Description)`
   max-width: 80%;
   font-size: clamp(1rem, 1.5vw, 1.13rem);
 
   padding-block-end: 2rem;
   & strong {
-    color: white;
+    color: ${({ theme }) => theme.subTitle};
   }
 `;
 
-export const Card = styled.div`
-  background-color: black;
-  position: relative;
-  padding: 2ch;
-  border-radius: ${global.borderRadious}rem;
-  margin-top: ${({ marginTop }) => marginTop || ''};
-`;
-
-export const ContentCard = styled.section`
-  padding: 2rem;
-  border-radius: ${global.borderRadious}rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.075);
-
-  &:hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-`;
-
-export const Wrapper = styled.main`
+export const Wrapper = styled.section`
   display: grid;
   grid-template-columns:
     1fr
     min(${global.maxWidth}px, 100%)
     1fr;
+  background-color: ${({ theme }) => theme.bg};
+  color: ${({ theme }) => theme.fcText};
 `;
 
-export const FullBleed = styled.div`
-  width: 100%;
-  grid-column: 1 / -1;
+export const Card = styled.div`
+  background-color: ${({ theme }) => theme.card};
+  position: relative;
+  padding: 2ch;
+  border-radius: ${global.borderRadious}rem;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    top: 2ch;
+    left: -4px;
+    border-top-left-radius: 0.115rem;
+    border-bottom-left-radius: 0.115rem;
+    background-color: ${(props) => props.theme.primary};
+  }
 `;

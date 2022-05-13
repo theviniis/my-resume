@@ -16,7 +16,6 @@ const List = styled.ul`
   align-items: center;
   padding-inline-end: 10ch;
   transition: 0.3 ease-in-out;
-  /* transform: scale(80%); */
 `;
 
 const Portifolio = () => {

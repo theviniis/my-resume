@@ -92,4 +92,5 @@ export const GlobalStyles = createGlobalStyle`
   b {
     font-weight: 600;
   }
+
 `;

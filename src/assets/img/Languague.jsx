@@ -10,7 +10,7 @@ const Icon = styled.svg`
   color: ${(props) => props.theme.primary};
 `;
 
-const Languague = () => {
+const Languague = ({ theme }) => {
   return (
     <Icon
       xmlns='http://www.w3.org/2000/svg'

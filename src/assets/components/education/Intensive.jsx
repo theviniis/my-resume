@@ -15,20 +15,8 @@ const List = styled.ul`
 `;
 const Item = styled(Card)`
   flex-direction: column;
+  color: ${({ theme }) => theme.subTitle};
   height: 120px;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 4px;
-    height: 20px;
-    top: 2ch;
-    left: -4px;
-    border-top-left-radius: 0.115rem;
-    border-bottom-left-radius: 0.115rem;
-    background-color: ${(props) => props.theme.primary};
-  }
 
   ${TitleLight} {
     font-size: 1rem;
@@ -48,7 +36,7 @@ const Content = styled.div`
   font-size: 1rem;
 `;
 
-const EducationList = () => {
+const EducationList = ({ theme }) => {
   return (
     <Container>
       <Icon icon='bx bxs-book-alt' />
@@ -56,11 +44,11 @@ const EducationList = () => {
       <SubTitle>intensive courses</SubTitle>
       <List>
         {user.courses.map((cur) => (
-          <Item as='li'>
-            <Title>{cur.course}</Title>
+          <Item as='li' theme={theme}>
+            <Title theme={theme}>{cur.course}</Title>
             <Content>
               <span>{cur.school}</span>
-              <TitleLight>{cur.hours} Hours</TitleLight>
+              <TitleLight theme={theme}>{cur.hours} Hours</TitleLight>
             </Content>
           </Item>
         ))}

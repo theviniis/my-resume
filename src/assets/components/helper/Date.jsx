@@ -15,9 +15,9 @@ const StyledSpan = styled.span`
   }
 `;
 
-const Date = ({ inicio, fim, className }) => {
+const Date = ({ inicio, fim, className, theme }) => {
   return (
-    <StyledSpan className={className}>
+    <StyledSpan className={className} theme={theme}>
       {/* <Icon className='bx bx-calendar-alt'></Icon> */}
       {inicio}
       <Icon className='bx bxs-right-arrow-alt'></Icon>
