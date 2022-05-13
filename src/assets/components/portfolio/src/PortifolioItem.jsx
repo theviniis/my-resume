@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Badger from '../../helper/Badger';
 import Button from '../../helper/Button';
-import { Card, Description, Title } from '../../../styles/styles';
+import { Description, Title } from '../../../styles/styles';
 import { global } from '../../../styles/global';
 
 const Wrapper = styled.div`
@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   ${(props) => console.log(props)}
   border-radius: ${global.borderRadious}rem;
   overflow: hidden;
-  /* max-width: 340px; */
 
   ${Description} {
     color: ${({ themes, focus }) =>
@@ -33,17 +32,6 @@ const Image = styled.div`
   object-fit: cover;
   margin-block-end: 2ch;
   position: relative;
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
-  }
 `;
 
 const Content = styled.div`
@@ -61,8 +49,7 @@ const Badgers = styled.ul`
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
-  bottom: 2ch;
+  top: 2ch;
   gap: 1ch;
   width: 100%;
   padding-inline: 2ch;

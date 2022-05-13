@@ -6,7 +6,7 @@ import PortifolioList from './src/PortifolioList';
 
 const Container = styled(Section)`
   grid-column: 2 / -1;
-  margin-inline-end: 5%;
+  /* margin-inline-end: 5%; */
 `;
 
 const Portifolio = ({ theme }) => {

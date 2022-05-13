@@ -102,10 +102,13 @@ export const GlobalStyles = createGlobalStyle`
     div{
     }
   }
+  .splide__list {
+    align-items: center;
+  }
 
   .splide__track--nav>.splide__list>.splide__slide {
     border: none;
-    transform: scale(80%);
+    /* transform: scale(90%); */
   }
 
 `;

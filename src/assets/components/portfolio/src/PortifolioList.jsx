@@ -6,24 +6,33 @@ import '@splidejs/react-splide/css';
 import PortifolioItem from './PortifolioItem';
 import { global } from '../../../styles/global';
 
+const List = styled(Splide)`
+  align-items: center;
+`;
+
+const Item = styled(SplideSlide)`
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+`;
+
 const options = {
-  // gap: '.5ch',
+  cover: true,
   // autoWidth: true,
-  perPage: 3,
-  start: 2,
-  perMove: 1,
-  focus: 'center',
-  arrows: false,
-  pagination: false,
-  easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-  slideFocus: 2,
-  isNavigation: true,
+  // width: '90%',
+  // gap: '2ch',
+  // perPage: 3,
+  // start: 1,
+  // perMove: 1,
+  // focus: 'center',
+  // arrows: false,
+  // pagination: false,
+  // easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+  // slideFocus: 2,
+  // isNavigation: true,
   updateOnMove: true,
   breakpoints: {
-    1200: {
-      perPage: 2,
-    },
-    800: {
+    640: {
       perPage: 1,
     },
   },
@@ -37,13 +46,13 @@ const PortifolioList = ({ themes }) => {
   };
 
   return (
-    <Splide
+    <List
       aria-label='My Favorite Images'
       options={options}
       onActive={(e, splide) => handleActive(e, splide)}
     >
       {user.portfolio.map((item, index) => (
-        <SplideSlide key={`${item.name}${index}`}>
+        <Item key={`${item.name}${index}`}>
           <PortifolioItem
             index={index}
             name={item.name}
@@ -53,9 +62,9 @@ const PortifolioList = ({ themes }) => {
             themes={themes}
             selected={selected}
           />
-        </SplideSlide>
+        </Item>
       ))}
-    </Splide>
+    </List>
   );
 };
 
