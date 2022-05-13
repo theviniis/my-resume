@@ -13,25 +13,29 @@ const List = styled(Splide)`
 const Item = styled(SplideSlide)`
   /* display: flex; */
   /* flex-wrap: wrap; */
+
   /* justify-content: center; */
 `;
 
 const options = {
-  cover: true,
+  // cover: true,
   // autoWidth: true,
   // width: '90%',
   // gap: '2ch',
-  // perPage: 3,
-  // start: 1,
-  // perMove: 1,
-  // focus: 'center',
-  // arrows: false,
-  // pagination: false,
-  // easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+  perPage: 3,
+  start: 1,
+  perMove: 1,
+  focus: 'center',
+  arrows: false,
+  pagination: false,
+  easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
   // slideFocus: 2,
-  // isNavigation: true,
+  isNavigation: true,
   updateOnMove: true,
   breakpoints: {
+    1340: {
+      perPage: 2,
+    },
     640: {
       perPage: 1,
     },

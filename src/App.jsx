@@ -17,11 +17,11 @@ function App() {
     <ThemeProvider
       theme={theme.theme === themes.light.name ? themes.light : themes.dark}
     >
-      <Header />
-      <Hero />
+      {/* <Header /> */}
+      {/* <Hero /> */}
       <Experience theme={themes.dark} />
       <Skills theme={themes.light} />
-      <Education theme={themes.dark} />
+      {/* <Education theme={themes.dark} /> */}
       <Portifolio themes={themes} />
       <GlobalStyles />
     </ThemeProvider>

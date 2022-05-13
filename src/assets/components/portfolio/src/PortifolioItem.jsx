@@ -6,6 +6,8 @@ import { Description, Title } from '../../../styles/styles';
 import { global } from '../../../styles/global';
 
 const Wrapper = styled.div`
+  max-width: 320px;
+
   background-color: ${({ themes, focus }) =>
     focus ? `${themes.dark.card}` : `${themes.light.card}`};
   ${(props) => console.log(props)}
@@ -29,7 +31,7 @@ const Image = styled.div`
   background: url('https://images.unsplash.com/photo-1651591605939-c660f12c0c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MjIyNDU1Ng&ixlib=rb-1.2.1&q=80&w=1080')
     no-repeat;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  /* object-fit: cover; */
   margin-block-end: 2ch;
   position: relative;
 `;
@@ -51,7 +53,7 @@ const Badgers = styled.ul`
   flex-wrap: wrap;
   top: 2ch;
   gap: 1ch;
-  width: 100%;
+  /* width: 100%; */
   padding-inline: 2ch;
 `;
 
