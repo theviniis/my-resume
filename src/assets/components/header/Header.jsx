@@ -17,7 +17,7 @@ const Container = styled.header`
 `;
 
 const Nav = styled.nav`
-  max-width: ${global.maxWidth}px;
+  /* max-width: ${global.maxWidth}px; */
   grid-column: 2;
   display: flex;
   justify-content: space-between;

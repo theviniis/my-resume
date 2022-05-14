@@ -8,7 +8,7 @@ export const Heading = styled.h2`
   max-width: 4ch;
   text-transform: uppercase;
   word-break: break-all;
-  @media (max-width: 840px) {
+  @media (max-width: 1000px) {
     font-size: clamp(3rem, 3vw, 4rem);
     margin-block-end: 1ch;
     word-break: initial;

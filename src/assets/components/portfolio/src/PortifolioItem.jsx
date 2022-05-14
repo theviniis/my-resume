@@ -6,11 +6,8 @@ import { Description, Title } from '../../../styles/styles';
 import { global } from '../../../styles/global';
 
 const Wrapper = styled.div`
-  max-width: 320px;
-
   background-color: ${({ themes, focus }) =>
     focus ? `${themes.dark.card}` : `${themes.light.card}`};
-  ${(props) => console.log(props)}
   border-radius: ${global.borderRadious}rem;
   overflow: hidden;
 
@@ -32,6 +29,7 @@ const Image = styled.div`
     no-repeat;
   aspect-ratio: 16 / 9;
   /* object-fit: cover; */
+  /* width: 100%; */
   margin-block-end: 2ch;
   position: relative;
 `;

@@ -90,25 +90,9 @@ export const GlobalStyles = createGlobalStyle`
     display: block;
   }
 
-  b {
-    font-weight: 600;
-  }
 
-  /* Splide */
-  .splide__track--nav>.splide__list>.splide__slide.is-active {
+  .splide__track--nav>.splide__list>.splide__slide.is-active, .splide__track--nav>.splide__list>.splide__slide {
     border: none;
-    transform: initial;
-
-    div{
-    }
-  }
-  .splide__list {
-    align-items: center;
-  }
-
-  .splide__track--nav>.splide__list>.splide__slide {
-    border: none;
-    /* transform: scale(90%); */
   }
 
 `;

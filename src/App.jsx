@@ -5,7 +5,6 @@ import { GlobalContext } from './assets/GlobalContext';
 import { GlobalStyles } from './assets/styles/global';
 import Header from './assets/components/header/Header';
 import Hero from './assets/components/hero/Hero';
-// import { Wrapper } from './assets/styles/styles';
 import Skills from './assets/components/skills/Skills';
 import Experience from './assets/components/experience/Experience';
 import Education from './assets/components/education/Education';
@@ -21,7 +20,7 @@ function App() {
       {/* <Hero /> */}
       <Experience theme={themes.dark} />
       <Skills theme={themes.light} />
-      {/* <Education theme={themes.dark} /> */}
+      <Education theme={themes.dark} />
       <Portifolio themes={themes} />
       <GlobalStyles />
     </ThemeProvider>

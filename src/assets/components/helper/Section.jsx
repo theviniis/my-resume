@@ -7,14 +7,17 @@ const Content = styled.div`
   display: grid;
   grid-template-columns: 220px 1fr;
   padding-block: 6ch;
-  column-gap: 10ch;
+  column-gap: clamp(2.5ch, 4vw, 8ch);
 
-  @media (max-width: 840px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 
   ${Heading} {
-    grid-row: span 4;
+    grid-row: span 0;
+    @media (max-width: 1000px) {
+      word-wrap: unset;
+    }
   }
 
   ${Description} {

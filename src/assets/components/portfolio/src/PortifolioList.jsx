@@ -4,40 +4,44 @@ import user from '../../../user';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import PortifolioItem from './PortifolioItem';
-import { global } from '../../../styles/global';
 
 const List = styled(Splide)`
+  grid-column: 3/ -1;
+  display: flex;
   align-items: center;
+  margin-inline-end: 2ch;
+  margin-inline-start: clamp(2.5ch, 4vw, 8ch);
+
+  @media (max-width: 1000px) {
+    grid-column: 2;
+    grid-row: 2;
+    margin-inline-start: initial;
+    margin-inline-end: initial;
+  }
 `;
 
-const Item = styled(SplideSlide)`
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-
-  /* justify-content: center; */
-`;
+const Item = styled(SplideSlide)``;
 
 const options = {
-  // cover: true,
-  // autoWidth: true,
-  // width: '90%',
-  // gap: '2ch',
+  gap: '2ch',
   perPage: 3,
-  start: 1,
   perMove: 1,
   focus: 'center',
   arrows: false,
   pagination: false,
   easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-  // slideFocus: 2,
   isNavigation: true,
   updateOnMove: true,
   breakpoints: {
-    1340: {
+    1280: {
       perPage: 2,
     },
-    640: {
+    1000: {
+      perPage: 2,
+    },
+    660: {
       perPage: 1,
+      arrows: true,
     },
   },
 };
