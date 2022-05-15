@@ -19,6 +19,7 @@ const Image = styled.img`
 const Title = styled.h2`
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 1.5rem;
 `;
 
 const Profile = ({ name, img }) => {

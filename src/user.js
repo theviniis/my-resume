@@ -112,7 +112,14 @@ const user = {
     },
   ],
 
-  sections: ['Home', 'Skills', 'Portfolio', 'Experience'],
+  sections: [
+    'Home',
+    'Experience',
+    'Education',
+    'Skills',
+    'Portifolio',
+    'Contact',
+  ],
 
   skills: [
     {

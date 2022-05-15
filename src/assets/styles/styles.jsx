@@ -51,9 +51,12 @@ export const Icon = styled.i`
 
 export const Description = styled.p`
   font-size: clamp(1rem, 1vw, 1.125rem);
-  font-weight: 300;
+  /* font-weight: 300; */
   color: ${({ theme }) =>
     theme.name === 'light' ? themes.light.fcText : themes.dark.fcText};
+  & strong {
+    color: ${({ theme }) => theme.subTitle};
+  }
 `;
 
 export const Intro = styled(Description)`

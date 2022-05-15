@@ -4,7 +4,7 @@ const themes = {
     primary: '#219ebc',
     secondary: '#e0e0e0',
     fcTitle: '#e0e0e0',
-    fcText: '#686868',
+    fcText: '#4d4d4d',
     subTitle: '#080808',
     card: '#f5f5f5',
     bg: '#FFF',
