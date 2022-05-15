@@ -12,6 +12,7 @@ import Text from '../form/Text';
 import Input from '../form/Input';
 import Button from '../helper/Button';
 import Section from '../helper/Section';
+import ContactList from './ContactList';
 
 const Container = styled(Section)``;
 const Content = styled.div`
@@ -28,8 +29,11 @@ const Content = styled.div`
     gap: 2rem;
   }
   ${Card} {
-    height: 100%;
-    width: 300px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1ch;
+    }
     &:before {
       all: unset;
     }
@@ -49,13 +53,15 @@ const Contact = () => {
     <Container name='Contact'>
       <Content>
         <Intro>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quam
-          dolorum fuga, odio esse impedit nam deserunt? Aut, placeat velit?
+          Estou disponível para novos projetos no momento. Entre em contato
+          comigo e marcamos uma conversa
         </Intro>
         <div>
           <div>
             <SubTitle>Entre em contato</SubTitle>
-            <Card></Card>
+            <Card>
+              <ContactList />
+            </Card>
           </div>
           <div>
             <SubTitle>Entre em contato</SubTitle>

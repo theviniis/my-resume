@@ -13,7 +13,7 @@ const Container = styled(Wrapper)`
   height: ${global.headerHeight}rem;
   z-index: 20;
   width: 100%;
-  padding-block: 1ch;
+  /* padding-block: 1ch; */
   top: 0;
   position: fixed;
   &,
@@ -24,7 +24,7 @@ const Container = styled(Wrapper)`
 
 const Nav = styled.nav`
   /* max-width: ${global.maxWidth}px; */
-  padding: 1ch 2ch;
+  /* padding: 1ch 2ch; */
   /* background-color: ${themes.dark.bg}; */
   border-radius: ${global.borderRadious}rem;
   width: 100%;

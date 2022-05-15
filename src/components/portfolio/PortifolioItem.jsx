@@ -10,8 +10,11 @@ const Wrapper = styled.div`
   border-radius: ${global.borderRadious}rem;
   overflow: hidden;
   transition: 300ms ease-in-out;
-  margin-block: 4ch;
   background-color: ${({ options }) => options.background};
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  &:hover {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
 
   ${Title} {
     color: ${({ options }) => options.title};

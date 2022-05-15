@@ -91,6 +91,10 @@ export const Card = styled.div`
   position: relative;
   padding: 2ch;
   border-radius: ${global.borderRadious}rem;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  &:hover {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
 
   &::before {
     content: '';

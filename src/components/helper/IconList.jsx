@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { global } from '../../styles/global';
-import { Icon } from '../../styles/styles';
+import { global } from '../../assets/styles/global';
+import { Icon } from '../../assets/styles/styles';
 
 const List = styled.ul`
   gap: ${global.mb1}rem;
@@ -12,10 +12,14 @@ const Item = styled.li`
   a {
     display: flex;
     align-items: center;
-    gap: ${global.mb1}rem;
+    gap: 0.5ch;
+    color: ${({ theme }) => theme.subTitle};
   }
-  a:hover {
-    color: ${({ theme }) => theme.titleColor};
+  &:hover {
+    &,
+    a {
+      color: ${({ theme }) => theme.primary};
+    }
   }
 `;
 
