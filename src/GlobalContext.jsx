@@ -1,5 +1,5 @@
 import React from 'react';
-import themes from './styles/themes';
+import themes from './assets/styles/themes';
 
 export const GlobalContext = React.createContext();
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card, SubTitle, Title, TitleLight } from '../../styles/styles';
+import { Card, SubTitle, Title, TitleLight } from '../../assets/styles/styles';
 import user from '../../user';
 import Date from '../helper/Date';
 import Icon from './Icon';
@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const Content = styled(Card)`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   height: 140px;
   width: max-content;
@@ -33,16 +34,18 @@ const University = ({ theme }) => {
       <Icon icon='bx bxs-graduation' />
       <SubTitle>University</SubTitle>
 
-      <Content theme={theme}>
-        <TitleLight theme={theme}>{user.education.faculdade}</TitleLight>
-        <Title theme={theme}>{user.education.curso}</Title>
-        <Date
-          inicio={user.education.inicio}
-          fim={user.education.final}
-          theme={theme}
-          color={theme.fcText}
-        />
-      </Content>
+      {user.education.map((i) => (
+        <Content theme={theme}>
+          <TitleLight theme={theme}>{i.faculdade}</TitleLight>
+          <Title theme={theme}>{i.curso}</Title>
+          <Date
+            inicio={i.inicio}
+            fim={i.final}
+            theme={theme}
+            color={theme.fcText}
+          />
+        </Content>
+      ))}
     </Container>
   );
 };

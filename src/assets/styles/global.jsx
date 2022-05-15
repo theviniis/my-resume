@@ -94,5 +94,6 @@ export const GlobalStyles = createGlobalStyle`
   .splide__track--nav>.splide__list>.splide__slide.is-active, .splide__track--nav>.splide__list>.splide__slide {
     border: none;
   }
+  .splide__list {align-items: center}
 
 `;

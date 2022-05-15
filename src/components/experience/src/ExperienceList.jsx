@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Intro } from '../../../styles/styles';
+import { Intro } from '../../../assets/styles/styles';
 import user from '../../../user';
 import ExperienceItem from './ExperienceItem';
 
 const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 2ch;
+  > li + li {
+    margin-block-start: 1rem;
+  }
 `;
 
 const ExperienceList = ({ theme }) => {
   return (
     <List>
-      <Intro as='li'>
+      <Intro as='li' theme={theme}>
         Desenvolvo pequenos projetos como o Bikcraft utilizando apenas{' '}
         <strong>CSS, JavaScript e HTML </strong>. Para aplicativos web como a
         rede social Dogs eu trabalhei no UX e UI Design do projeto.

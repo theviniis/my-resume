@@ -17,12 +17,20 @@ const user = {
     'Very interested in React.JS with Styled Components andJavaScript tooling.',
   ],
 
-  education: {
-    faculdade: 'Estácio University',
-    curso: 'Analysis and Systems Development',
-    inicio: 'Jun - 2019',
-    final: 'Dec - 2023',
-  },
+  education: [
+    {
+      faculdade: 'Estácio University',
+      curso: 'Analysis and Systems Development',
+      inicio: 'Jun - 2019',
+      final: 'Dec - 2023',
+    },
+    {
+      faculdade: 'Estácio University',
+      curso: 'Analysis and Systems Development',
+      inicio: 'Jun - 2019',
+      final: 'Dec - 2023',
+    },
+  ],
 
   languages: [
     {

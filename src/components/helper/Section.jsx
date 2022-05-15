@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Wrapper, Heading, Description } from '../../styles/styles';
+import { Wrapper, Heading, Description } from '../../assets/styles/styles';
 
 const Content = styled.div`
   grid-column: 2;
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 180px 1fr;
   padding-block: 6ch;
   column-gap: clamp(2.5ch, 4vw, 8ch);
 

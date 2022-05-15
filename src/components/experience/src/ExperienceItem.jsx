@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card, Description, Title } from '../../../styles/styles';
+import { Card, Description, Title } from '../../../assets/styles/styles';
 import Badger from '../../helper/Badger';
 import Date from '../../helper/Date';
 
 const Item = styled(Card)`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 2ch;
 
   ${Title} {

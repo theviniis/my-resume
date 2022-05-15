@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { global } from '../styles/global';
+import themes from './themes';
 
 export const Heading = styled.h2`
   color: ${({ theme }) => theme.fcTitle};
@@ -8,17 +9,21 @@ export const Heading = styled.h2`
   max-width: 4ch;
   text-transform: uppercase;
   word-break: break-all;
+  line-height: 1;
   @media (max-width: 1000px) {
+    color: ${({ theme }) => theme.subTitle};
+
     font-size: clamp(3rem, 3vw, 4rem);
-    margin-block-end: 1ch;
+    margin-block-end: 1rem;
     word-break: initial;
   }
 `;
 
 export const Title = styled.h3`
-  font-size: clamp(1.1rem, 1vw, 1.125rem);
+  font-size: 1.125rem;
   font-weight: ${({ fontWeight }) => fontWeight || '600'};
-  color: ${({ theme }) => theme.subTitle};
+  color: ${({ theme }) =>
+    theme.name === 'dark' ? themes.dark.subTitle : themes.light.subTitle};
 `;
 
 export const SubTitle = styled.h3`
@@ -26,7 +31,7 @@ export const SubTitle = styled.h3`
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-block-end: 2ch;
+  margin-block-end: 1rem;
   line-height: 1;
   letter-spacing: 1px;
 `;
@@ -47,13 +52,20 @@ export const Icon = styled.i`
 export const Description = styled.p`
   font-size: clamp(1rem, 1vw, 1.125rem);
   font-weight: 300;
+  color: ${({ theme }) =>
+    theme.name === 'light' ? themes.light.fcText : themes.dark.fcText};
 `;
 
 export const Intro = styled(Description)`
-  max-width: 80%;
-  font-size: clamp(1rem, 1.5vw, 1.13rem);
-
-  padding-block-end: 2rem;
+  max-width: 50ch;
+  font-size: clamp(1.125rem, 1.5vw, 1.13rem);
+  padding-block-end: 1rem;
+  color: ${({ theme }) =>
+    theme.name === 'light' ? themes.light.fcText : themes.dark.fcText};
+  @media (max-width: 1000px) {
+    max-width: 60ch;
+    /* padding-block-end: 0; */
+  }
   & strong {
     color: ${({ theme }) => theme.subTitle};
   }
@@ -63,14 +75,16 @@ export const Wrapper = styled.section`
   display: grid;
   grid-template-columns:
     1fr
-    min(${global.maxWidth}px, 80%)
+    min(${global.maxWidth}px, 90%)
     1fr;
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.fcText};
 `;
 
 export const Card = styled.div`
-  background-color: ${({ theme }) => theme.card};
+  /* background-color: ${({ theme }) => theme.card}; */
+  background-color: ${({ theme, focus }) =>
+    focus || theme.name === 'light' ? themes.light.card : themes.dark.card};
   position: relative;
   padding: 2ch;
   border-radius: ${global.borderRadious}rem;

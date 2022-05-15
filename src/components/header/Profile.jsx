@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import user from '../../user';
-import ProfileImg from '../../img/profile.jpeg';
+import ProfileImg from '../../assets/img/profile.jpeg';
 
 const Container = styled.div`
   display: flex;

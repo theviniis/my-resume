@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Wrapper } from '../../styles/styles';
+import { Wrapper } from '../../assets/styles/styles';
 import Section from '../helper/Section';
 import MySkills from './MySkills';
 

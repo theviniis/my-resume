@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Intro } from '../../styles/styles';
+import { Intro, Heading } from '../../assets/styles/styles';
 import Section from '../helper/Section';
 import University from './University';
 import Intensive from './Intensive';
 import Languages from './Languages';
-import { Heading } from '../../styles/styles';
 
 const Wrapper = styled(Section)`
   ${Heading} {
-    grid-row: span 4;
+    grid-row: 1 / 5;
+    @media (max-width: 1000px) {
+      grid-row: 1;
+    }
   }
 `;
 

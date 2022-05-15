@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Languague from '../../img/Languague';
+import Languague from '../../assets/img/Languague';
 
 const StyledIcon = styled.span`
   position: absolute;

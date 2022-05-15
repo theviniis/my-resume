@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const List = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 154.6px);
+  grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
   gap: 1ch;
 `;
 const Item = styled.li`

@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Wrapper } from '../../styles/styles';
+import { Wrapper, Description } from '../../assets/styles/styles';
 import HeroButton from '../helper/HeroButton';
 import Illustration from './Illustration';
-import { Description } from '../../styles/styles';
 
 const Container = styled(Wrapper)`
   padding-block: 6ch;

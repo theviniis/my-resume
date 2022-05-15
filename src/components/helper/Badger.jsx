@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { global } from '../../styles/global';
+import { global } from '../../assets/styles/global';
 
 const Item = styled.li`
   padding: 0.5em;

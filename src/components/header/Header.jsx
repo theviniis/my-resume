@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Profile from './Profile';
-import { global } from '../../styles/global';
+import { global } from '../../assets/styles/global';
 import NavList from './NavList';
 import Button from '../helper/Button';
 

@@ -1,27 +1,28 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import themes from './assets/styles/themes';
-import { GlobalContext } from './assets/GlobalContext';
+import { GlobalContext } from './GlobalContext';
 import { GlobalStyles } from './assets/styles/global';
-import Header from './assets/components/header/Header';
-import Hero from './assets/components/hero/Hero';
-import Skills from './assets/components/skills/Skills';
-import Experience from './assets/components/experience/Experience';
-import Education from './assets/components/education/Education';
-import Portifolio from './assets/components/portfolio/Portifolio';
+import Header from './components/header/Header';
+import Hero from './components/hero/Hero';
+import Skills from './components/skills/Skills';
+import Experience from './components/experience/Experience';
+import Education from './components/education/Education';
+import Portifolio from './components/portfolio/Portifolio';
 
 function App() {
   const theme = React.useContext(GlobalContext);
+  // console.log(themes.dark);
   return (
     <ThemeProvider
       theme={theme.theme === themes.light.name ? themes.light : themes.dark}
     >
-      {/* <Header /> */}
-      {/* <Hero /> */}
+      <Header />
+      <Hero />
       <Experience theme={themes.dark} />
       <Skills theme={themes.light} />
       <Education theme={themes.dark} />
-      <Portifolio themes={themes} />
+      <Portifolio theme={themes.light} />
       <GlobalStyles />
     </ThemeProvider>
   );

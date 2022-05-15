@@ -1,11 +1,12 @@
 import React from 'react';
 import user from '../../user';
 import styled from 'styled-components';
-import { Card, SubTitle, Title, TitleLight } from '../../styles/styles';
+import { Card, SubTitle, Title, TitleLight } from '../../assets/styles/styles';
 import Icon from './Icon';
 
 const Container = styled.div`
   position: relative;
+  margin-block-end: 2ch;
 `;
 const List = styled.ul`
   grid-column: 2;
