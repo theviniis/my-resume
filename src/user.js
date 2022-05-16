@@ -67,8 +67,7 @@ const user = {
       company: 'Central de Funcionamento',
       startDate: 'Apr - 2016',
       endDate: 'Dec - 2017',
-      description:
-        'Suporte a clientes, esclarecimento de dúvidas, resolução de dificuldades relacionadas a problemas de informática, com a finalidade de garantir o bom funcionamento da rede, tais como configurações de modem, roteadores e repetidores, impressoras, antivírus, e-mail e aparelhos eletrônicos.',
+      description: `Suporte a clientes, esclarecimento de dúvidas, resolução de dificuldades relacionadas a problemas de informática, com a finalidade de garantir o bom funcionamento da rede, tais como configurações de modem, roteadores e repetidores, impressoras, antivírus, e-mail e aparelhos eletrônicos.`,
       skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'WordPress'],
     },
   ],
@@ -166,7 +165,7 @@ const user = {
     {
       name: 'E-Shoots',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      img: 'plannar.jpg',
+      img: 'eshoots.jpg',
       skills: ['HTML', 'CSS', 'Ruby On Rails', 'SASS', 'UX Design'],
     },
     {

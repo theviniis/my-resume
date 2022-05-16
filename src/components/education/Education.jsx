@@ -7,6 +7,9 @@ import Intensive from './Intensive';
 import Languages from './Languages';
 
 const Wrapper = styled(Section)`
+  ${Intro} {
+    padding-block-end: 2rem;
+  }
   ${Heading} {
     grid-row: 1 / 5;
     @media (max-width: 1000px) {

@@ -11,7 +11,6 @@ import Education from './components/education/Education';
 import Portifolio from './components/portfolio/Portifolio';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import Text from './components/form/Text';
 
 function App() {
   const theme = React.useContext(GlobalContext);
@@ -26,7 +25,7 @@ function App() {
       <Education theme={themes.light} />
       <Skills theme={themes.dark} />
       <Portifolio theme={themes.light} />
-      <Contact />
+      <Contact theme={themes.dark} />
       <Footer />
       <GlobalStyles />
     </ThemeProvider>

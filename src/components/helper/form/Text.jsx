@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { global } from '../../assets/styles/global';
+import { global } from '../../../assets/styles/global';
 
 const Container = styled.label`
   position: relative;

@@ -42,17 +42,20 @@ const Wrapper = styled.div`
   }
 `;
 
-const Image = styled.div`
-  background: url('https://images.unsplash.com/photo-1651591605939-c660f12c0c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MjIyNDU1Ng&ixlib=rb-1.2.1&q=80&w=1080')
-    no-repeat;
+const Image = styled.img`
+  /* background: url(${({ portifolioImg }) => portifolioImg}) no-repeat; */
   aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   margin-block-end: 2ch;
-  position: relative;
 `;
 
 const Content = styled.div`
   padding-inline: 2ch;
   padding-block-end: 2ch;
+  position: relative;
+
   > div {
     display: flex;
     align-items: center;
@@ -63,12 +66,14 @@ const Content = styled.div`
 `;
 
 const Badgers = styled.ul`
-  position: absolute;
+  /* position: absolute; */
   display: flex;
-  flex-wrap: wrap;
-  top: 2ch;
+  /* flex-wrap: wrap; */
+  /* top: 2ch; */
   gap: 1ch;
-  padding-inline: 2ch;
+  margin-block-end: 2ch;
+
+  /* padding-inline: 2ch; */
   > li {
     background-color: ${themes.light.card};
   }
@@ -108,17 +113,18 @@ const PortifolioCard = ({
   };
 
   const options = colorValidation();
+  const portifolioImg = require(`../../assets/img/${img}`);
+  // console.log(src);
 
   return (
     <Wrapper focus={focus} theme={theme} options={options}>
-      <Image>
+      <Image src={portifolioImg} />
+      <Content>
         <Badgers options={options}>
           {badgers.map((item, i) => (
             <Badger name={item} key={`${item}${i}`} />
           ))}
         </Badgers>
-      </Image>
-      <Content>
         {focus ? <Description theme={theme}>{description}</Description> : null}
         <div>
           <Title theme={theme}>{name}</Title>

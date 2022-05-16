@@ -69,7 +69,7 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     max-width: 60ch;
-    margin-block: 0 !important;
+    margin-block: 0;
     
   }
 
