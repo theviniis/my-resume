@@ -1,0 +1,71 @@
+.portifolio {
+  --max-width: $max-width;
+  display: grid;
+  // grid-column: 2;
+  grid-template-columns:
+    1fr
+    180px
+    Min(calc(var(--max-width) - 180px), 90%)
+    1fr !important;
+  grid-template-areas: 'title slide';
+  &__splide {
+    max-width: 100%;
+  }
+
+  // @include breakpoint(notebook) {
+  //   // grid-column: 2;
+  //   // grid-row: 2;
+  //   // margin-inline-start: initial;
+  //   // margin-inline-end: initial;
+  // }
+
+  &__content {
+    // grid-column: 2;
+    // display: flex;
+    // display: grid;
+    // grid-template-columns: 180px 1fr;
+    // padding-block: 6ch;
+    // column-gap: clamp(2.5ch, 4vw, 8ch);
+    // max-width: 100%;
+  }
+  // .splide__list {
+  //   align-items: center;
+  //   margin-inline-end: 1rem;
+  //   &,
+  //   li,
+  //   .card,
+  //   div {
+  //     max-width: 100%;
+  //     width: 100%;
+  //   }
+  //   .card {
+  //     transition: 300ms ease-in-out;
+  //     padding: 0;
+
+  //     &:before {
+  //       all: unset;
+  //     }
+
+  //     img {
+  //       aspect-ratio: 16 / 9;
+  //       object-fit: cover;
+  //     }
+
+  //     &-content {
+  //       padding: 2ch;
+  //       position: relative;
+  //       @include flex(column, 2ch, wrap);
+
+  //       ul {
+  //         @include flex(row, 1ch, wrap);
+  //       }
+
+  //       > .call-to-action {
+  //         @include flex(row, 2ch, no-wrap);
+  //         align-items: center;
+  //         justify-content: space-between;
+  //       }
+  //     }
+  //   }
+  // }
+}

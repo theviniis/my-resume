@@ -1,0 +1,50 @@
+.header {
+  font-size: $fs-lg;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $c-bg;
+  z-index: 50;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0 !important;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+
+    &__img {
+      height: 28px;
+      object-fit: cover;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+    }
+
+    &__name {
+      font-weight: $fw-semibold;
+      text-transform: uppercase;
+      font-size: $fs-xl;
+    }
+  }
+  &__nav__list {
+    display: flex;
+    gap: 1ch;
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+    &__item {
+      padding: 0.25em;
+      border-radius: $border-radius;
+
+      a:hover {
+        color: $c-primary;
+      }
+    }
+  }
+}

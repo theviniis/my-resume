@@ -1,5 +1,5 @@
 import React from 'react';
-import user from '../../user';
+import { user } from '../../user';
 import IconList from '../helper/IconList';
 
 const list = [

@@ -1,52 +1,22 @@
 import React from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import user from '../../user';
-import styled from 'styled-components';
+import { user } from '../../user';
 
-const List = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
-  gap: 1ch;
-`;
-const Item = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1ch;
-  padding: 0.5ch;
-  font-size: clamp(1.5rem, 1.25vw, 2.5rem);
-  color: ${({ theme }) => theme.subTitle};
-  svg {
-    .CircularProgressbar,
-    .CircularProgressbar-path {
-      stroke: ${({ theme }) => theme.primary};
-    }
-    .CircularProgressbar-trail {
-      stroke: #e0e0e0;
-    }
-    text {
-      fill: ${({ theme }) => theme.primary} !important;
-      font-weight: 600;
-    }
-  }
-`;
-
-const MySkills = ({ theme }) => {
+const MySkills = () => {
   return (
-    <List as='ul'>
+    <ul className='skills__list'>
       {user.skills.map((s) => (
-        <Item key={s.name} theme={theme}>
+        <li className='skills__list__item' key={s.name}>
           <CircularProgressbar
             value={s.level}
             text={`${s.level}%`}
-            strokeWidth='14'
+            strokeWidth='13'
           />
           {s.name}
-        </Item>
+        </li>
       ))}
-    </List>
+    </ul>
   );
 };
 

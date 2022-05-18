@@ -1,33 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-import user from '../../user';
-import ProfileImg from '../../assets/img/profile.jpeg';
+import { user } from '../../user';
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1ch;
-`;
-
-const Image = styled.img`
-  width: 28px;
-  height: 28px;
-  object-fit: cover;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-`;
-const Title = styled.h2`
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-`;
-
-const Profile = ({ name, img }) => {
+const Profile = ({ img }) => {
   return (
-    <Container>
-      {img ? <Image src={ProfileImg} alt={name} /> : null}
-      <Title>{user.contact.firstName}</Title>
-    </Container>
+    <div className='header__profile'>
+      {img ? (
+        <img
+          src={require('../../assets/img/profile.jpeg')}
+          alt={user.contact.firstName}
+          className='header__profile__img'
+        />
+      ) : null}
+      <h3 className='header__profile__name'>{user.contact.firstName}</h3>
+    </div>
   );
 };
 

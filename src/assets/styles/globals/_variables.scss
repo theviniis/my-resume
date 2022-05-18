@@ -1,0 +1,63 @@
+// Font styles
+$font: 'Poppins', sans-serif;
+$fs-xs: 0.875rem;
+$fs-sm: 1rem;
+$fs-md: 1.125rem;
+$fs-lg: 1.25rem;
+$fs-xl: 1.5rem;
+$fs-xx: 6rem;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$lh-title: 1.1;
+$lh-text: 1.5;
+
+// Other styles
+$max-width: 1000px;
+$header-height: 4rem;
+$border-radius: 0.5rem;
+
+// Themes
+
+// default
+$clr-default-bg: white;
+$clr-default-primary: #219ebc;
+$clr-default-secondary: #e0e0e0;
+$clr-default-title: #080808;
+$clr-default-text: #4d4d4d;
+
+// light
+$clr-light-bg: white;
+$clr-light-primary: #219ebc;
+$clr-light-secondary: #e0e0e0;
+$clr-light-title: #080808;
+$clr-light-text: #4d4d4d;
+
+// dark
+$clr-dark-bg: #141414;
+$clr-dark-primary: #219ebc;
+$clr-dark-secondary: #000;
+$clr-dark-title: #fff;
+$clr-dark-text: #a3a3a3;
+
+$c-primary: #219ebc;
+$c-secondary: #e0e0e0;
+$c-bg: white;
+$fc-heading: #e0e0e0;
+$fc-title: #e0e0e0;
+$fc-subtitle: #080808;
+$fc-text: #4d4d4d;
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 600px,
+  //700px
+  // 'tablet': 62.25em,
+  //900px
+  'notebook': 1000px,
+  //1000px
+);

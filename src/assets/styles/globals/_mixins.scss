@@ -1,0 +1,23 @@
+@mixin breakpoint($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin flex($direction, $gap, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin wrapper($gtc) {
+  display: grid;
+  grid-template-columns: $gtc;
+}
+
+@mixin grid($gtc, $gap) {
+  display: grid;
+  grid-template-columns: $gtc;
+  gap: $gap;
+}

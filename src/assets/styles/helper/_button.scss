@@ -1,0 +1,33 @@
+/* From uiverse.io by @CristianMontoya98 */
+.btn {
+  width: 6em;
+  height: 2.25em;
+  // margin: 0.5em;
+  border: none;
+  border-radius: $border-radius;
+  font-size: $fs-md;
+  font-weight: $fw-semibold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button:after {
+  content: '';
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}

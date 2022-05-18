@@ -1,42 +1,21 @@
 import React from 'react';
-import { SubTitle, TitleLight } from '../../assets/styles/styles';
-import styled from 'styled-components';
-import user from '../../user';
+import { user } from '../../user';
 import Icon from './Icon';
 
-const Container = styled.div`
-  position: relative;
-  color: ${({ theme }) => theme.subTitle};
-`;
-
-const Item = styled.li`
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.subTitle};
-`;
-
-const Level = styled(TitleLight)`
-  font-size: 1rem;
-  color: ${({ theme }) => theme.fcText};
-
-  letter-spacing: initial;
-  text-transform: capitalize;
-`;
-
-const Languages = ({ theme }) => {
+const Languages = () => {
   return (
-    <Container theme={theme}>
+    <div className='education__languages'>
       <Icon icon='language' />
-      <SubTitle>Languages</SubTitle>
-      <ul>
+      <h3 className='title-color'>Languages</h3>
+      <ul className='education__languages__list'>
         {user.languages.map((lang) => (
-          <Item key={lang.language} theme={theme}>
+          <li className='education__languages__list__item' key={lang.language}>
             {lang.language}
-            <Level theme={theme}>: {lang.level}</Level>
-          </Item>
+            <span>: {lang.level}</span>
+          </li>
         ))}
       </ul>
-    </Container>
+    </div>
   );
 };
 

@@ -1,34 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
-import { global } from '../../assets/styles/global';
-import user from '../../user';
-
-const List = styled.ul`
-  display: flex;
-  gap: 1ch;
-  @media (max-width: 600px) {
-    display: none;
-  }
-`;
-const Item = styled.li`
-  /* background-color: ${({ theme }) => theme.card}; */
-  /* border: 2px solid ${({ theme }) => theme.card}; */
-  padding: 0.25em;
-  border-radius: ${global.borderRadious}rem;
-  a {
-    color: ${({ theme }) => theme.fcText};
-  }
-`;
+import { user } from '../../user';
 
 const NavList = () => {
   return (
-    <List>
+    <ul className='header__nav__list'>
       {user.sections.map((section) => (
-        <Item key={section}>
+        <li key={section} className='header__nav__list__item'>
           <a href={`#${section.toLowerCase()}`}>{section}</a>
-        </Item>
+        </li>
       ))}
-    </List>
+    </ul>
   );
 };
 

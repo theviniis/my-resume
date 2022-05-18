@@ -1,0 +1,36 @@
+.experience {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      $gtc: 1.5fr 1fr;
+      $gap: 2ch;
+      @include grid($gtc, $gap);
+      p {
+        font-size: $fs-xs;
+      }
+
+      & + & {
+        margin-block-start: 1rem;
+      }
+
+      [class*='title'] {
+        margin-block-end: 1rem;
+      }
+
+      &__main {
+        .date {
+          margin-block-end: 0.5ch;
+        }
+      }
+      &__skills {
+        &__list {
+          flex-wrap: wrap;
+          display: flex;
+          gap: 1ch;
+        }
+      }
+    }
+  }
+}

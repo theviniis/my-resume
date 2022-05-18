@@ -1,15 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import Languague from '../../assets/img/Languague';
 
-const StyledIcon = styled.span`
-  position: absolute;
-  left: -1.5ch;
-  top: -2px;
-  font-size: 1.125rem;
-  color: ${(props) => props.theme.primary};
-`;
-const Icon = ({ icon, className }) => {
+const Icon = ({ icon }) => {
   if (icon === 'language') {
     return <Languague />;
   } else if (icon === 'language') {
@@ -17,7 +9,7 @@ const Icon = ({ icon, className }) => {
   } else if (icon === 'language') {
     return <Languague />;
   } else {
-    return <StyledIcon className={icon}></StyledIcon>;
+    return <span className={icon}></span>;
   }
 };
 

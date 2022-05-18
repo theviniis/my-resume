@@ -1,60 +1,48 @@
 import React from 'react';
-import user from '../../user';
+import { user } from '../../user';
 import styled from 'styled-components';
 import { Card, SubTitle, Title, TitleLight } from '../../assets/styles/styles';
 import Icon from './Icon';
 
-const Container = styled.div`
-  position: relative;
-  margin-block-end: 2ch;
-`;
-const List = styled.ul`
-  grid-column: 2;
-  display: grid;
-  gap: 2ch;
-  grid-template-columns: repeat(auto-fill, 213px);
-`;
+const Container = styled.div``;
+const List = styled.ul``;
 const Item = styled(Card)`
-  flex-direction: column;
-  color: ${({ theme }) => theme.subTitle};
-  height: 120px;
-
   ${TitleLight} {
     font-size: 1rem;
   }
 
   &,
   & div {
-    display: flex;
-    justify-content: space-between;
   }
   div {
-    align-items: center;
   }
 `;
 
-const Content = styled.div`
-  font-size: 1rem;
-`;
+const Content = styled.div``;
 
 const EducationList = ({ theme }) => {
   return (
-    <Container>
-      <Icon icon='bx bxs-book-alt' />
+    <div className='education__intensive'>
+      <Icon icon='bx bxs-book-alt education__icon' />
 
-      <SubTitle>intensive courses</SubTitle>
-      <List>
+      <h2 className='title-color'>intensive courses</h2>
+      <ul className='education__intensive__list'>
         {user.courses.map((cur, i) => (
-          <Item as='li' theme={theme} key={`${cur.course}${i}`}>
-            <Title theme={theme}>{cur.course}</Title>
-            <Content>
-              <span>{cur.school}</span>
-              <TitleLight theme={theme}>{cur.hours} Hours</TitleLight>
-            </Content>
-          </Item>
+          <li
+            className='education__intensive__list__item card'
+            key={`${cur.course}${i}`}
+          >
+            <h2 className='title'>{cur.course}</h2>
+            <div>
+              <span className='education__intensive__list__item__school'>
+                {cur.school}
+              </span>
+              <h3 className='title-light'>{cur.hours} Hours</h3>
+            </div>
+          </li>
         ))}
-      </List>
-    </Container>
+      </ul>
+    </div>
   );
 };
 

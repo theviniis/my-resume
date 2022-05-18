@@ -1,38 +1,60 @@
 import React from 'react';
-import styled from 'styled-components';
-import themes from '../../assets/styles/themes';
 import PortifolioList from './PortifolioList';
-import { Heading } from '../../assets/styles/styles';
-import { global } from '../../assets/styles/global';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import PortifolioItem from './PortifolioItem';
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns:
-    1fr
-    180px
-    min(${global.maxWidth - 180}px, 90%)
-    1fr;
-  padding-block: 6ch;
-  background-color: ${({ theme }) => theme.bg};
-  @media (max-width: 1000px) {
-    grid-template-columns:
-      1fr
-      min(${global.maxWidth}px, 90%)
-      1fr;
-  }
-
-  ${Heading} {
-    width: 180px;
-    grid-column: 2;
-  }
-`;
+import Section from '../helper/Section';
+import { user } from '../../user';
 
 const Portifolio = ({ theme }) => {
+  const [selected, setSelected] = React.useState(null);
+
+  const handleActive = (splide) => {
+    setSelected(splide.index);
+  };
+  const options = {
+    gap: '1rem',
+    perPage: 3,
+    perMove: 1,
+    focus: 'center',
+    arrows: false,
+    pagination: false,
+    isNavigation: true,
+    updateOnMove: true,
+    breakpoints: {
+      1280: {
+        // arrows: true,
+        // perPage: 2,
+      },
+
+      660: {
+        perPage: 1,
+      },
+    },
+  };
   return (
-    <Container name='Portifolio' id='portifolio' theme={theme}>
-      <Heading theme={theme}>Portifolio</Heading>
-      <PortifolioList theme={theme} />
-    </Container>
+    <section name='portifolio' theme={theme} className='portifolio'>
+      <h2 className=''>Portifólio</h2>
+      <Splide
+        options={options}
+        onActive={(e, splide) => handleActive(e, splide)}
+      >
+        {user.portfolio.map((item, index) => (
+          <SplideSlide key={`${item.name}${index}`}>
+            <PortifolioItem
+              index={index}
+              name={item.name}
+              badgers={item.skills}
+              img={item.img}
+              description={item.description}
+              theme={theme}
+              selected={selected}
+              className='splide__list__item'
+            />
+          </SplideSlide>
+        ))}
+      </Splide>
+    </section>
   );
 };
 

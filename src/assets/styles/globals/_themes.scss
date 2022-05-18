@@ -1,0 +1,102 @@
+$theme-default: $clr-default-bg, $clr-default-primary, $clr-default-secondary,
+  $clr-default-title, $clr-default-text;
+
+$theme-light: $clr-light-bg, $clr-light-primary, $clr-light-secondary,
+  $clr-light-title, $clr-light-text;
+
+$theme-dark: $clr-dark-bg, $clr-dark-primary, $clr-dark-secondary,
+  $clr-dark-title, $clr-dark-text;
+
+@mixin color-scheme($bg, $primary, $secondary, $title, $text) {
+  background-color: $bg;
+  color: $text;
+
+  .heading {
+    color: $secondary;
+  }
+  [class*='title'],
+  .education__intensive__list__item__school,
+  .education__languages__list__item {
+    color: $title;
+  }
+  [class*='intro'],
+  [class*='description'],
+  [class*='date'],
+  li,
+  a,
+  span,
+  p {
+    color: $text;
+  }
+
+  .card {
+    background-color: $secondary;
+    position: relative;
+    &::before {
+      background-color: $primary;
+    }
+  }
+  [class*='skills'] {
+    li {
+      color: $title;
+    }
+  }
+  [class*='date'] {
+    .icon {
+      color: $primary;
+    }
+  }
+  .title-color {
+    color: $primary;
+  }
+  .title-light {
+    color: $text;
+  }
+  [class*='icon'] {
+    color: $primary;
+  }
+
+  svg {
+    .CircularProgressbar,
+    .CircularProgressbar-path {
+      color: $primary;
+    }
+    .CircularProgressbar-trail {
+      stroke: $secondary;
+    }
+
+    text {
+      font-weight: $fw-semibold;
+    }
+  }
+
+  .btn {
+    background: $primary;
+    color: white;
+
+    &:hover {
+      color: $title;
+    }
+  }
+}
+
+.theme-default {
+  @include color-scheme($theme-dark...);
+  .badger {
+    background-color: white;
+  }
+}
+
+.theme-dark {
+  @include color-scheme($theme-dark...);
+  .badger {
+    background-color: $clr-dark-bg;
+  }
+}
+
+.theme-light {
+  @include color-scheme($theme-light...);
+  .badger {
+    background-color: white;
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Description, Title, Wrapper } from '../../assets/styles/styles';
 import themes from '../../assets/styles/themes';
-import user from '../../user';
+import { user } from '../../user';
 import IconList from '../helper/IconList';
 
 const data = [

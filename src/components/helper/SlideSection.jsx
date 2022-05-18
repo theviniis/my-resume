@@ -1,5 +1,5 @@
 import React from 'react';
-import user from '../../user';
+import { user } from '../../user';
 import Section from './Section';
 import Slider from './slider/Slider';
 import styled from 'styled-components';

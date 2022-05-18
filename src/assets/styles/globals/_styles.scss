@@ -1,0 +1,84 @@
+@import '@splidejs/react-splide/css';
+
+.wrapper {
+  $gtr: 1fr Min($max-width, 90%) 1fr;
+  @include wrapper($gtr);
+  // padding-block: 6ch;
+}
+
+[class*='intro'] {
+  font-size: clamp($fs-md, 1.5vw, 1.135rem);
+  margin-block-end: 2rem;
+  max-width: 60ch;
+
+  @media (max-width: 1000px) {
+    /* padding-block-end: 0; */
+  }
+  & strong {
+    // color: $fc-subtitle;
+  }
+}
+
+.heading {
+  font-size: clamp(4rem, 5vw, 8rem);
+  font-weight: 700;
+  max-width: 4ch;
+  text-transform: uppercase;
+  word-break: break-all;
+  line-height: 1;
+
+  @include breakpoint(notebook) {
+    font-size: clamp(3rem, 3vw, 4rem);
+    margin-block-end: 1rem;
+    word-break: initial;
+  }
+}
+
+.card {
+  padding: 2ch;
+  border-radius: $border-radius;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    top: 2ch;
+    left: -4px;
+    border-top-left-radius: 0.115rem;
+    border-bottom-left-radius: 0.115rem;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+[class*='title'] {
+  font-size: $fs-md;
+  font-weight: $fw-semibold;
+}
+
+.title-color {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block-end: 1rem;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.title-light {
+  font-size: $fs-xs;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: $fw-regular;
+}
+
+.splide__track--nav > .splide__list > .splide__slide,
+.splide__track--nav > .splide__list > .splide__slide.is-active {
+  border: none;
+}

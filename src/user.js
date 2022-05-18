@@ -1,4 +1,18 @@
-const user = {
+export const settings = [];
+
+export const user = {
+  hero: {
+    name: 'home',
+    intro: 'Hi, I am Vinícius',
+    description: `<strong>Front-end developer</strong> student looking for an
+      opportunity to start working as a developer, with the goal to
+      enhance my personal and professional skills with intensive classes,
+      certifications and open source contributions. Very interested in
+      <strong>React.JS</strong> with <strong>Styled Components</strong>
+      and <strong>JavaScript</strong> tooling.`,
+    button: 'Contact',
+  },
+
   contact: {
     firstName: 'Vinícius',
     lastName: 'Costa',
@@ -26,7 +40,7 @@ const user = {
     },
     {
       faculdade: 'Estácio University',
-      curso: 'Analysis and Systems Development',
+      curso: 'Systems Development',
       inicio: 'Jun - 2019',
       final: 'Dec - 2023',
     },
@@ -194,5 +208,3 @@ const user = {
     },
   ],
 };
-
-export default user;

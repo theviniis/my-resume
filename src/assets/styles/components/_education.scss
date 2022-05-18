@@ -1,0 +1,81 @@
+.education {
+  .heading {
+    grid-row: 1 / 5;
+
+    @include breakpoint(notebook) {
+      grid-row: 1;
+    }
+  }
+  > div {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    left: -1.5ch;
+    top: -1.5px;
+    font-size: $fs-sm;
+  }
+
+  &__university {
+    @include flex(column, 0, no-wrap);
+    position: relative;
+    margin-block-end: 2ch;
+
+    &__list {
+      @include flex(row, 2ch, wrap);
+      &__item {
+        .title-light {
+          margin-block-end: 1ch;
+        }
+
+        .date {
+          margin-block-start: 2rem;
+          justify-self: end;
+        }
+      }
+    }
+  }
+  &__intensive {
+    margin-block-end: 2ch;
+
+    &__list {
+      $gtc: repeat(auto-fill, minmax(214px, 1fr));
+      $gap: 2ch;
+      grid-column: 2;
+      @include grid($gtc, $gap);
+      &__item {
+        height: 90px;
+        flex-direction: column;
+
+        &,
+        & > div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        > div {
+          align-items: center;
+
+          [class*='school'] {
+            font-weight: $fw-medium;
+          }
+
+          .title-light {
+            text-transform: capitalize;
+            font-size: $fs-sm;
+          }
+        }
+      }
+    }
+  }
+
+  &__languages {
+    &__list {
+      &__item {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
