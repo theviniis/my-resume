@@ -1,20 +1,18 @@
-.wrapper {
-  .content {
-    // grid-column: 2;
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    padding-block: 6ch;
-    column-gap: clamp(2.5ch, 4vw, 8ch);
+.wrapper .content {
+  // grid-column: 2;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  padding-block: 6ch;
+  column-gap: clamp(2.5ch, 4vw, 8ch);
 
-    &,
-    .heading {
-      @include breakpoint(notebook) {
-        grid-template-columns: 1fr;
+  &,
+  .heading {
+    @include breakpoint(notebook) {
+      grid-template-columns: 1fr;
 
-        .heading {
-          grid-row: span 0;
-          word-wrap: unset;
-        }
+      .heading {
+        grid-row: span 0;
+        word-wrap: unset;
       }
     }
   }

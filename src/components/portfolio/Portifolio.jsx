@@ -1,60 +1,52 @@
 import React from 'react';
-import PortifolioList from './PortifolioList';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import PortifolioItem from './PortifolioItem';
-
 import Section from '../helper/Section';
+import Carousel, { consts } from 'react-elastic-carousel';
+import PortifolioItem from './PortifolioItem';
 import { user } from '../../user';
 
 const Portifolio = ({ theme }) => {
-  const [selected, setSelected] = React.useState(null);
+  const [selected, setSelected] = React.useState(0);
+  // console.log(selected);
 
-  const handleActive = (splide) => {
-    setSelected(splide.index);
+  const handleActive = (index) => {
+    setSelected(index);
+    // console.log(selected);
   };
-  const options = {
-    gap: '1rem',
-    perPage: 3,
-    perMove: 1,
-    focus: 'center',
-    arrows: false,
-    pagination: false,
-    isNavigation: true,
-    updateOnMove: true,
-    breakpoints: {
-      1280: {
-        // arrows: true,
-        // perPage: 2,
-      },
 
-      660: {
-        perPage: 1,
-      },
-    },
-  };
+  const breakpoints = [
+    { width: 1400, itemsToShow: 3 },
+    { width: 1280, itemsToShow: 2 },
+    { width: 660, itemsToShow: 1 },
+  ];
+
   return (
-    <section name='portifolio' theme={theme} className='portifolio'>
-      <h2 className=''>Portifólio</h2>
-      <Splide
-        options={options}
-        onActive={(e, splide) => handleActive(e, splide)}
+    <Section name='portifolio' theme={theme}>
+      <Carousel
+        itemsToShow={3}
+        pagination={false}
+        itemsToScroll={1}
+        focusOnSelect={true}
+        // showArrows={false}
+        // breakPoints={breakpoints}
+        itemPosition={consts.CENTER}
+        itemPadding={[0, 7.5]}
+        initialActiveIndex={selected}
+        onChange={({ index }) => handleActive(index)}
       >
         {user.portfolio.map((item, index) => (
-          <SplideSlide key={`${item.name}${index}`}>
-            <PortifolioItem
-              index={index}
-              name={item.name}
-              badgers={item.skills}
-              img={item.img}
-              description={item.description}
-              theme={theme}
-              selected={selected}
-              className='splide__list__item'
-            />
-          </SplideSlide>
+          <PortifolioItem
+            key={`${item.name}${index}`}
+            index={index}
+            name={item.name}
+            badgers={item.skills}
+            img={item.img}
+            description={item.description}
+            selected={selected}
+            className='splide__list__item'
+          />
         ))}
-      </Splide>
-    </section>
+      </Carousel>
+    </Section>
   );
 };
 

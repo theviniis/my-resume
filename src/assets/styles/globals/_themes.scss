@@ -69,13 +69,30 @@ $theme-dark: $clr-dark-bg, $clr-dark-primary, $clr-dark-secondary,
       font-weight: $fw-semibold;
     }
   }
-
   .btn {
-    background: $primary;
-    color: white;
+    background-color: $primary;
+    color: $bg;
+  }
+  // .btn {
+  //   background: $primary;
+  //   color: white;
 
-    &:hover {
-      color: $title;
+  //   &:hover {
+  //     color: $title;
+  //   }
+  // }
+  .inp {
+    input,
+    textarea {
+      background: $secondary;
+
+      &:focus {
+        box-shadow: inset 0 -2px 0 $primary;
+
+        + .label {
+          color: $primary;
+        }
+      }
     }
   }
 }

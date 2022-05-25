@@ -18,13 +18,14 @@
   }
 
   &__university {
-    @include flex(column, 0, no-wrap);
+    @include flex(column, 0, nowrap);
     position: relative;
     margin-block-end: 2ch;
 
     &__list {
       @include flex(row, 2ch, wrap);
       &__item {
+        flex-grow: 1;
         .title-light {
           margin-block-end: 1ch;
         }

@@ -2,11 +2,11 @@ import React from 'react';
 
 const HeroButton = ({ name }) => {
   return (
-    <button class='learn-more'>
-      <span class='circle' aria-hidden='true'>
-        <span class='icon arrow'></span>
+    <button className='learn-more'>
+      <span className='circle' aria-hidden='true'>
+        <span className='icon arrow'></span>
       </span>
-      <span class='button-text'>{name}</span>
+      <span className='button-text'>{name}</span>
     </button>
   );
 };

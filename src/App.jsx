@@ -10,6 +10,7 @@ import Education from './components/education/Education';
 import Portifolio from './components/portfolio/Portifolio';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import SplideTest from './SplideTest';
 
 function App() {
   // const theme = React.useContext(GlobalContext);
@@ -20,9 +21,10 @@ function App() {
       <Experience theme='dark' />
       <Education theme='dark' />
       <Skills theme='light' />
-      {/* <Portifolio theme='light' /> */}
-      <Contact theme={themes.dark} />
-      <Footer />
+      <Portifolio theme='dark' />
+      <Contact theme='light' />
+      {/* <SplideTest /> */}
+      {/* <Footer /> */}
     </>
   );
 }

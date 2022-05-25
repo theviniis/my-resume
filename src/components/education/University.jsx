@@ -11,7 +11,10 @@ const University = () => {
 
       <ul className='education__university__list'>
         {user.education.map((i) => (
-          <li className='education__university__list__item card'>
+          <li
+            key={`${i.curso}${i.faculdade}`}
+            className='education__university__list__item card'
+          >
             <h3 className='title-light'>{i.faculdade}</h3>
             <h2 className='title'>{i.curso}</h2>
             <Date inicio={i.inicio} fim={i.final} />

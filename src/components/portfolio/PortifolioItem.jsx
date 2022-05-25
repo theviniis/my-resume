@@ -11,25 +11,25 @@ const PortifolioCard = ({
   index,
   description,
   selected,
-  theme,
 }) => {
-  const focus = selected === index ? true : false;
+  const isFocus = selected === index ? true : false;
 
+  console.log(isFocus);
   const portifolioImg = require(`../../assets/img/${img}`);
 
   return (
-    <div focus={focus} className='card'>
+    <div className='portifolio-item card' isFocus={isFocus}>
       <img src={portifolioImg} alt='' />
-      <div className='card-content'>
-        <ul>
-          {badgers.map((item, i) => (
-            <Badger name={item} key={`${item}${i}`} />
-          ))}
-        </ul>
-        {focus ? <p className='intro'>{description}</p> : null}
+      <ul className='badger-list'>
+        {badgers.map((item, i) => (
+          <Badger name={item} key={`${item}${i}`} />
+        ))}
+      </ul>
+      <div className='portifolio-item-content'>
+        {isFocus ? <p className='description'>{description}</p> : null}
         <div className='call-to-action'>
           <h2 className='title'>{name}</h2>
-          <button class='btn'>Visit</button>
+          <Button>Checkout</Button>
         </div>
       </div>
     </div>

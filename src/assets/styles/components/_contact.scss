@@ -1,0 +1,25 @@
+.contact {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'intro intro' 'profile contact';
+    column-gap: 4ch;
+  }
+  .intro {
+    grid-area: intro;
+  }
+
+  .profile-content {
+    grid-area: profile;
+  }
+
+  .contact-content {
+    grid-area: contact;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1ch;
+      justify-content: center;
+    }
+  }
+}
