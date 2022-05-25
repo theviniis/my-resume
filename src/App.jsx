@@ -16,13 +16,13 @@ function App() {
   // const theme = React.useContext(GlobalContext);
   return (
     <>
-      <Header />
-      <Hero />
-      <Experience theme='dark' />
-      <Education theme='dark' />
-      <Skills theme='light' />
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      {/* <Experience theme='dark' /> */}
+      {/* <Education theme='dark' /> */}
+      {/* <Skills theme='light' /> */}
       <Portifolio theme='dark' />
-      <Contact theme='light' />
+      {/* <Contact theme='light' /> */}
       {/* <SplideTest /> */}
       {/* <Footer /> */}
     </>

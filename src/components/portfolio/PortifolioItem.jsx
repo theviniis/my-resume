@@ -14,7 +14,6 @@ const PortifolioCard = ({
 }) => {
   const isFocus = selected === index ? true : false;
 
-  console.log(isFocus);
   const portifolioImg = require(`../../assets/img/${img}`);
 
   return (
