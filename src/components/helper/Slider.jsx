@@ -1,82 +1,93 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 const List = styled.ul`
-  width: auto;
-  height: auto;
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   overflow: hidden;
-  gap: ${({ gap }) => (gap ? gap : null)};
+  width: calc(100% - 2ch);
 `;
 
 const Item = styled.li`
   flex-shrink: 0;
-  // border: 2px solid blue;
-  /* width: 100%; */
-  width: ${({ width, gap }) =>
-    width ? `calc(100% / ${width} - ${gap})` : '100%'};
-  height: 100%;
+  flex-basis: ${({ slideWidth }) => slideWidth};
   transition: 300ms ease;
-  transform: ${({ offSetX }) => `translateX(${offSetX * -50}%)`};
-  /* pointer-events: none; */
+  transform: ${({ offSetX }) => `translateX(-${offSetX}px)`};
+  * {
+    pointer-events: none;
+  }
+  & + & {
+    padding-inline-start: ${({ gap }) => gap};
+  }
 `;
 
 const Buttons = styled.div`
-  position: absolute;
-  top: 50%;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: none;
 `;
 
 const Slider = ({ children, options }) => {
   const [x, setX] = useState(0);
-  const slide = useRef(null);
+  const [slideWidth, setSlideWidth] = useState(null);
 
-  // const [active, setActive] = useState();
+  const slider = useRef(null);
+
+  useEffect(() => {
+    setSlideWidth(
+      `calc((${slider.current.offsetWidth}px - (${options.perPage - 1} * ${
+        options.gap
+      })) / ${options.perPage})`
+
+      // calc((1226px - (2 * 2rem)) / 3);
+    );
+  }, [slideWidth, options]);
 
   const goPrev = (e) => {
     e.preventDefault();
-    x === 0 ? setX(0) : setX(x + 1);
+    x === 0 ? setX(0) : setX(x - 1);
   };
 
   const goNext = (e) => {
     e.preventDefault();
-    // x === -1 * children.length + 1 ? setX(x) : setX(x - 1);
-    // console.log(slide.offsetWidth);
-    // setX(slide.offsetWidth);
-    console.log(slide);
+    x === children.length - 1 ? setX(x) : setX(x + 1);
   };
 
   const onDrag = (e) => {
+    e.stopPropagation();
     e.preventDefault();
-    setX(e.clientX / 300);
-  };
-  const onDragEnd = (e) => {
-    e.preventDefault();
-    setX(e.clientX / 300);
-    console.log(slide.offsetWidth);
+    if (e.screenX === 0) {
+      return;
+    }
+    console.log(e);
+    setX(e.clientX * options.dragoffSet);
   };
 
-  // console.log(slide);
+  function handleMove(e) {
+    return console.log(e);
+  }
 
   return (
     <List
       className='slider'
       gap={options.gap}
-      onDrag={onDrag}
-      onDragEnd={onDragEnd}
       dragOffSet={options.dragOffset}
+      ref={slider}
+      onDrag={onDrag}
+      onMouseMove={handleMove}
     >
       {children.map((item, index) => (
         <Item
           key={index}
           offSetX={x}
-          width={options.perPage}
           gap={options.gap}
-          ref={slide}
+          slideWidth={slideWidth}
+          // onClick={() => setX(index)}
         >
           {item}
         </Item>

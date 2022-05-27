@@ -1,4 +1,11 @@
 .portifolio {
+  .slider {
+    grid-column: 2;
+  }
+
+  .heading {
+    display: none;
+  }
   &.content {
     grid-column: 2/-1;
     margin-inline-end: 6ch;

@@ -1,14 +1,13 @@
 import React from 'react';
 import Section from '../helper/Section';
-import Carousel, { consts } from 'react-elastic-carousel';
 import PortifolioItem from './PortifolioItem';
 import { user } from '../../user';
 import Slider from '../helper/Slider';
 
 const options = {
   perPage: 3,
-  gap: '2ch',
-  dragOffset: 1,
+  gap: '2rem',
+  dragoffSet: 2,
 };
 
 const Portifolio = ({ theme }) => {
