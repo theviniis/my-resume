@@ -1,9 +1,8 @@
 .wrapper .content {
-  // grid-column: 2;
-  display: grid;
-  grid-template-columns: 180px 1fr;
+  $gtc: 200px 1fr;
+  $gap: 0 clamp(2.5ch, 4vw, 8ch);
+  @include grid($gtc, $gap);
   padding-block: 6ch;
-  column-gap: clamp(2.5ch, 4vw, 8ch);
 
   &,
   .heading {

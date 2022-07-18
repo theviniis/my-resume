@@ -25,7 +25,7 @@ const EducationList = ({ theme }) => {
     <div className='education__intensive'>
       <Icon icon='bx bxs-book-alt education__icon' />
 
-      <h2 className='title-color'>intensive courses</h2>
+      <h3 className='title-color'>intensive courses</h3>
       <ul className='education__intensive__list'>
         {user.courses.map((cur, i) => (
           <li
@@ -37,7 +37,7 @@ const EducationList = ({ theme }) => {
               <span className='education__intensive__list__item__school'>
                 {cur.school}
               </span>
-              <h3 className='title-light'>{cur.hours} Hours</h3>
+              <p className='title-light'>{cur.hours} Hours</p>
             </div>
           </li>
         ))}

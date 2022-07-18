@@ -3,9 +3,6 @@
     grid-column: 2;
   }
 
-  .heading {
-    display: none;
-  }
   &.content {
     grid-column: 2/-1;
     margin-inline-end: 6ch;
@@ -13,8 +10,7 @@
 
   &-item {
     --padding: 0;
-    transition: 300ms ease-in-out;
-    // min-height: 22.625rem;
+    // transition: 300ms ease-in-out;
 
     &:before {
       all: unset;

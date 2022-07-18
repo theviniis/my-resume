@@ -7,7 +7,7 @@ const University = () => {
   return (
     <div className='education__university'>
       <Icon icon='bx bxs-graduation education__icon' />
-      <h2 className='title-color '>University</h2>
+      <h3 className='title-color '>University</h3>
 
       <ul className='education__university__list'>
         {user.education.map((i) => (

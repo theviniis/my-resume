@@ -4,12 +4,12 @@ export const user = {
   hero: {
     name: 'home',
     intro: 'Hi, I am Vinícius',
-    description: `<strong>Front-end developer</strong> student looking for an
+    description: `Front-end developer student looking for an
       opportunity to start working as a developer, with the goal to
       enhance my personal and professional skills with intensive classes,
       certifications and open source contributions. Very interested in
-      <strong>React.JS</strong> with <strong>Styled Components</strong>
-      and <strong>JavaScript</strong> tooling.`,
+      React.JS with Styled Components
+      and JavaScript tooling.`,
     button: 'Contact',
   },
 
@@ -152,7 +152,7 @@ export const user = {
       level: 70,
     },
     {
-      name: 'Styled Components',
+      name: 'Styled-components',
       level: 70,
     },
     {
