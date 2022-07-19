@@ -1,8 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import Badger from '../helper/Badger';
 import Button from '../helper/Button';
-import HeroButton from '../helper/HeroButton';
 
 const PortifolioCard = ({
   name,

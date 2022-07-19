@@ -24,12 +24,6 @@
   }
 }
 
-.description {
-  @extend .intro;
-  margin-block-end: 0;
-  font-size: 0.875rem;
-}
-
 .heading {
   font-size: clamp(4rem, 5vw, 8rem);
   font-weight: 700;

@@ -2,15 +2,11 @@ export const settings = [];
 
 export const user = {
   hero: {
-    name: 'home',
-    intro: 'Hi, I am Vinícius',
-    description: `Front-end developer student looking for an
-      opportunity to start working as a developer, with the goal to
-      enhance my personal and professional skills with intensive classes,
-      certifications and open source contributions. Very interested in
-      React.JS with Styled Components
-      and JavaScript tooling.`,
-    button: 'Contact',
+    name: 'Início',
+    intro: 'Olá, sou o Vinícius',
+    description:
+      'Desenvolvedor front-end com grande experiência como Analista de Suporte em busca de oportunidade para começar a trabalhar como desenvolvedor, com objetivo de aprimorar minhas habilidades pessoais e profissionais através de aulas intensivas, certificações e contribuições open-source. Muito interesse pelas ferramentas JavaScript, React.JS com Styled-components. Como um eterno aprendiz, adoro enfrentar desafios com esforço, dedicação e foco.',
+    button: 'Contato',
   },
 
   contact: {
@@ -25,11 +21,6 @@ export const user = {
     facebook: 'theviniis',
     instagram: '_viniis',
   },
-
-  description: [
-    'Front-end developer student looking for an opportunity to start working as a developer, with the goal to enhance my personal and professional skills with intensive classes, certifications and open source contributions.',
-    'Very interested in React.JS with Styled Components andJavaScript tooling.',
-  ],
 
   education: [
     {

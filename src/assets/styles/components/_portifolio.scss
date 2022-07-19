@@ -10,7 +10,7 @@
 
   &-item {
     --padding: 0;
-    // transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
 
     &:before {
       all: unset;
@@ -22,11 +22,10 @@
     }
 
     .badger-list {
-      --padding: 2ch;
       @include flex(row, 1ch, wrap);
       position: absolute;
-      top: var(--padding);
-      left: var(--padding);
+      top: 0;
+      margin: 2ch;
     }
 
     &-content {

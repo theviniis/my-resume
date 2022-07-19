@@ -23,9 +23,9 @@ const Item = styled.li`
   }
 `;
 
-const IconList = ({ list, className }) => {
+const IconList = ({ list }) => {
   return (
-    <List className={`${className} flex`}>
+    <List className={'flex'}>
       {list.map((item) =>
         item.href ? (
           <Item key={item.icon}>

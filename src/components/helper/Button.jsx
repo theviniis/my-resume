@@ -1,4 +1,4 @@
-const Button = ({ children, name, href, color }) => {
+const Button = ({ children, href }) => {
   if (href)
     return (
       <a href={href}>
